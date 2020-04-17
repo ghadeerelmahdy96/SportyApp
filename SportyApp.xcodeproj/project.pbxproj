@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0873A591244A348E00E03291 /* MainScenaraioStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0873A590244A348E00E03291 /* MainScenaraioStoryboard.storyboard */; };
 		E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA4244A2C6600C144E6 /* AppDelegate.swift */; };
 		E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA6244A2C6600C144E6 /* SceneDelegate.swift */; };
 		E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA8244A2C6600C144E6 /* ViewController.swift */; };
@@ -15,11 +14,11 @@
 		E3B1ACAF244A2C6600C144E6 /* SportyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACAD244A2C6600C144E6 /* SportyApp.xcdatamodeld */; };
 		E3B1ACB1244A2C6A00C144E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACB0244A2C6A00C144E6 /* Assets.xcassets */; };
 		E3B1ACB4244A2C6A00C144E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACB2244A2C6A00C144E6 /* LaunchScreen.storyboard */; };
+		E3B1ACD0244A3BB000C144E6 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACCE244A3BB000C144E6 /* Details.storyboard */; };
 		E47D635825B62A74BD6AD911 /* Pods_SportyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0873A590244A348E00E03291 /* MainScenaraioStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainScenaraioStoryboard.storyboard; path = ../../../../../Documents/MainScenaraioStoryboard.storyboard; sourceTree = "<group>"; };
 		124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EB294BEE8C31B73025DD47 /* Pods-SportyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.release.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFA4B61F650F1AA8631C8A16 /* Pods-SportyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.debug.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		E3B1ACB0244A2C6A00C144E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3B1ACB3244A2C6A00C144E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3B1ACB5244A2C6A00C144E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3B1ACCF244A3BB000C144E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SportyApp/Main/Base.lproj/Details.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +49,7 @@
 		0873A58F244A345800E03291 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				E3B1ACCD244A3AE300C144E6 /* Details */,
 				E3B1ACBE244A2CB100C144E6 /* Main */,
 			);
 			path = features;
@@ -97,8 +98,6 @@
 				E3B1ACBF244A2D7B00C144E6 /* services */,
 				E3B1ACBD244A2C9D00C144E6 /* network */,
 				E3B1ACBC244A2C9500C144E6 /* model */,
-				E3B1ACA8244A2C6600C144E6 /* ViewController.swift */,
-				E3B1ACAA244A2C6600C144E6 /* Main.storyboard */,
 				E3B1ACB2244A2C6A00C144E6 /* LaunchScreen.storyboard */,
 				E3B1ACB5244A2C6A00C144E6 /* Info.plist */,
 			);
@@ -123,7 +122,8 @@
 		E3B1ACBE244A2CB100C144E6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0873A590244A348E00E03291 /* MainScenaraioStoryboard.storyboard */,
+				E3B1ACAA244A2C6600C144E6 /* Main.storyboard */,
+				E3B1ACA8244A2C6600C144E6 /* ViewController.swift */,
 			);
 			name = Main;
 			path = ../Main;
@@ -144,6 +144,14 @@
 				E3B1ACA6244A2C6600C144E6 /* SceneDelegate.swift */,
 			);
 			path = controls;
+			sourceTree = "<group>";
+		};
+		E3B1ACCD244A3AE300C144E6 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E3B1ACCE244A3BB000C144E6 /* Details.storyboard */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +213,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0873A591244A348E00E03291 /* MainScenaraioStoryboard.storyboard in Resources */,
 				E3B1ACB4244A2C6A00C144E6 /* LaunchScreen.storyboard in Resources */,
 				E3B1ACB1244A2C6A00C144E6 /* Assets.xcassets in Resources */,
 				E3B1ACAC244A2C6600C144E6 /* Main.storyboard in Resources */,
+				E3B1ACD0244A3BB000C144E6 /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +276,14 @@
 				E3B1ACB3244A2C6A00C144E6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E3B1ACCE244A3BB000C144E6 /* Details.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3B1ACCF244A3BB000C144E6 /* Base */,
+			);
+			name = Details.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

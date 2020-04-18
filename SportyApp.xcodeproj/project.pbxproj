@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08A4780F244B739700434B21 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4780E244B739700434B21 /* Sport.swift */; };
 		E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA4244A2C6600C144E6 /* AppDelegate.swift */; };
 		E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA6244A2C6600C144E6 /* SceneDelegate.swift */; };
 		E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA8244A2C6600C144E6 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08A4780E244B739700434B21 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EB294BEE8C31B73025DD47 /* Pods-SportyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.release.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFA4B61F650F1AA8631C8A16 /* Pods-SportyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.debug.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -53,6 +55,22 @@
 				E3B1ACBE244A2CB100C144E6 /* Main */,
 			);
 			path = features;
+			sourceTree = "<group>";
+		};
+		08A4780C244B737000434B21 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				08A4780E244B739700434B21 /* Sport.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		08A4780D244B737800434B21 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3B1ACAD244A2C6600C144E6 /* SportyApp.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		59E63F5FAE72BD1A82DB3C99 /* Frameworks */ = {
@@ -107,7 +125,8 @@
 		E3B1ACBC244A2C9500C144E6 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E3B1ACAD244A2C6600C144E6 /* SportyApp.xcdatamodeld */,
+				08A4780D244B737800434B21 /* DataModel */,
+				08A4780C244B737000434B21 /* Entities */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -252,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A4780F244B739700434B21 /* Sport.swift in Sources */,
 				E3B1ACAF244A2C6600C144E6 /* SportyApp.xcdatamodeld in Sources */,
 				E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */,
 				E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */,

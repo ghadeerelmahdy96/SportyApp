@@ -3,11 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		08A4780F244B739700434B21 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4780E244B739700434B21 /* Sport.swift */; };
+		08A47812244B7A1700434B21 /* RemoteHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47811244B7A1700434B21 /* RemoteHandlerProtocol.swift */; };
+		08A47814244B7A9F00434B21 /* SportsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47813244B7A9F00434B21 /* SportsHandler.swift */; };
+		08A47816244B7AC900434B21 /* LeaguesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47815244B7AC900434B21 /* LeaguesHandler.swift */; };
+		08A47818244B7AEF00434B21 /* EventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47817244B7AEF00434B21 /* EventsHandler.swift */; };
+		08A4781A244B7B0B00434B21 /* TeamsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47819244B7B0B00434B21 /* TeamsHandler.swift */; };
+		08A4781C244B7B2A00434B21 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4781B244B7B2A00434B21 /* League.swift */; };
+		08A4781E244B7B3700434B21 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4781D244B7B3700434B21 /* Event.swift */; };
+		08A47820244B7B4300434B21 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4781F244B7B4300434B21 /* Team.swift */; };
 		E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA4244A2C6600C144E6 /* AppDelegate.swift */; };
 		E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA6244A2C6600C144E6 /* SceneDelegate.swift */; };
 		E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA8244A2C6600C144E6 /* ViewController.swift */; };
@@ -21,6 +29,14 @@
 
 /* Begin PBXFileReference section */
 		08A4780E244B739700434B21 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		08A47811244B7A1700434B21 /* RemoteHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHandlerProtocol.swift; sourceTree = "<group>"; };
+		08A47813244B7A9F00434B21 /* SportsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsHandler.swift; sourceTree = "<group>"; };
+		08A47815244B7AC900434B21 /* LeaguesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesHandler.swift; sourceTree = "<group>"; };
+		08A47817244B7AEF00434B21 /* EventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHandler.swift; sourceTree = "<group>"; };
+		08A47819244B7B0B00434B21 /* TeamsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsHandler.swift; sourceTree = "<group>"; };
+		08A4781B244B7B2A00434B21 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		08A4781D244B7B3700434B21 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		08A4781F244B7B4300434B21 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EB294BEE8C31B73025DD47 /* Pods-SportyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.release.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFA4B61F650F1AA8631C8A16 /* Pods-SportyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.debug.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +77,9 @@
 			isa = PBXGroup;
 			children = (
 				08A4780E244B739700434B21 /* Sport.swift */,
+				08A4781B244B7B2A00434B21 /* League.swift */,
+				08A4781D244B7B3700434B21 /* Event.swift */,
+				08A4781F244B7B4300434B21 /* Team.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -71,6 +90,18 @@
 				E3B1ACAD244A2C6600C144E6 /* SportyApp.xcdatamodeld */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		08A47810244B79E100434B21 /* RemoteHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				08A47811244B7A1700434B21 /* RemoteHandlerProtocol.swift */,
+				08A47813244B7A9F00434B21 /* SportsHandler.swift */,
+				08A47815244B7AC900434B21 /* LeaguesHandler.swift */,
+				08A47817244B7AEF00434B21 /* EventsHandler.swift */,
+				08A47819244B7B0B00434B21 /* TeamsHandler.swift */,
+			);
+			path = RemoteHandlers;
 			sourceTree = "<group>";
 		};
 		59E63F5FAE72BD1A82DB3C99 /* Frameworks */ = {
@@ -125,6 +156,7 @@
 		E3B1ACBC244A2C9500C144E6 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				08A47810244B79E100434B21 /* RemoteHandlers */,
 				08A4780D244B737800434B21 /* DataModel */,
 				08A4780C244B737000434B21 /* Entities */,
 			);
@@ -291,9 +323,17 @@
 			files = (
 				08A4780F244B739700434B21 /* Sport.swift in Sources */,
 				E3B1ACAF244A2C6600C144E6 /* SportyApp.xcdatamodeld in Sources */,
+				08A47820244B7B4300434B21 /* Team.swift in Sources */,
+				08A47818244B7AEF00434B21 /* EventsHandler.swift in Sources */,
+				08A47812244B7A1700434B21 /* RemoteHandlerProtocol.swift in Sources */,
+				08A4781E244B7B3700434B21 /* Event.swift in Sources */,
 				E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */,
+				08A4781A244B7B0B00434B21 /* TeamsHandler.swift in Sources */,
+				08A47814244B7A9F00434B21 /* SportsHandler.swift in Sources */,
 				E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */,
 				E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */,
+				08A4781C244B7B2A00434B21 /* League.swift in Sources */,
+				08A47816244B7AC900434B21 /* LeaguesHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

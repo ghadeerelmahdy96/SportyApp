@@ -9,5 +9,9 @@
 import Foundation
 
 struct League{
-    
+    var idLeague : String
+    var strLeague : String
+    var strSport : String
+    var strBadge : String
+    var strYoutube : String
 }

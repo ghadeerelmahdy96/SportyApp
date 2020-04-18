@@ -24,6 +24,7 @@
 		E3B1ACB1244A2C6A00C144E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACB0244A2C6A00C144E6 /* Assets.xcassets */; };
 		E3B1ACB4244A2C6A00C144E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACB2244A2C6A00C144E6 /* LaunchScreen.storyboard */; };
 		E3B1ACD0244A3BB000C144E6 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACCE244A3BB000C144E6 /* Details.storyboard */; };
+		E3F55446244B8B450046675C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55445244B8B450046675C /* Constants.swift */; };
 		E47D635825B62A74BD6AD911 /* Pods_SportyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		E3B1ACB3244A2C6A00C144E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3B1ACB5244A2C6A00C144E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B1ACCF244A3BB000C144E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SportyApp/Main/Base.lproj/Details.storyboard; sourceTree = SOURCE_ROOT; };
+		E3F55445244B8B450046675C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		E3B1ACBF244A2D7B00C144E6 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				E3F55445244B8B450046675C /* Constants.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				08A47814244B7A9F00434B21 /* SportsHandler.swift in Sources */,
 				E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */,
 				E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */,
+				E3F55446244B8B450046675C /* Constants.swift in Sources */,
 				08A4781C244B7B2A00434B21 /* League.swift in Sources */,
 				08A47816244B7AC900434B21 /* LeaguesHandler.swift in Sources */,
 			);

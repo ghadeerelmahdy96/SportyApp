@@ -9,5 +9,16 @@
 import Foundation
 
 struct Event{
+    var idEvent : String
+    var strEvent : String
+    var strHomeTeam : String
+    var strAwayTeam : String
+    var intHomeScore : String
+    var intAwayScore : String
+    var idHomeTeam : String
+    var idAwayTeam : String
+    var strDate : String
+    var strTime : String
+    var status : Int
     
 }

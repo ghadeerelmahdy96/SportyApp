@@ -23,6 +23,14 @@
                                     <segue destination="QFD-l3-clK" kind="showDetail" id="YAJ-UZ-tRd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfh-ee-QYP">
+                                <rect key="frame" x="128" y="433" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to TabBar"/>
+                                <connections>
+                                    <segue destination="wge-HP-H19" kind="show" id="hTa-J6-hXK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JoU-FA-l7K"/>
@@ -40,5 +48,61 @@
             </objects>
             <point key="canvasLocation" x="665" y="-43"/>
         </scene>
+        <!--My Favourites-->
+        <scene sceneID="y7y-8s-cVx">
+            <objects>
+                <viewController id="pdo-U3-bN5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oxb-fA-8nu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iZd-UI-Z90"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Favourites" selectedImage="star" catalog="system" id="LA6-9G-vN9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XY7-KN-5bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940.5797101449277" y="77.678571428571431"/>
+        </scene>
+        <!--Sports-->
+        <scene sceneID="MgR-3c-9Tj">
+            <objects>
+                <viewController id="cIE-0b-dpZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mYj-DK-M2c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6it-aN-QeF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sports" selectedImage="gamecontroller" catalog="system" id="0lb-ym-z7T"/>
+                    <navigationItem key="navigationItem" id="PFA-Ay-jxK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sye-Bv-ewa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="753"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9Ze-oM-sPb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wge-HP-H19" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mjt-V3-THo"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e9H-Nv-5gs">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pdo-U3-bN5" kind="relationship" relationship="viewControllers" id="qBQ-r8-vDV"/>
+                        <segue destination="cIE-0b-dpZ" kind="relationship" relationship="viewControllers" id="6QG-wG-Qam"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqv-tC-19Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030.4347826086957" y="77.678571428571431"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="gamecontroller" catalog="system" width="64" height="40"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+    </resources>
 </document>

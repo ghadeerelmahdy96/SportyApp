@@ -11,7 +11,7 @@ import Alamofire_SwiftyJSON
 import Alamofire
 import SwiftyJSON
 class LeaguesHandler : RemoteHandlerProtocol{
-    func fetchData() {
+    func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
         
     }
     

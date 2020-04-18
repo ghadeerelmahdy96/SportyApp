@@ -11,12 +11,9 @@ import Foundation
 
 struct Sport {
     
-    var idSport : String
+    var idSport : Int
     var strSport: String
-    var strFormat : String
     var strSportThumb : String
-    var strSportThumbGreen : String
     var strSportDescription : String
-    
     
 }

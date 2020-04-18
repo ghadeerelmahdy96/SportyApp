@@ -9,7 +9,7 @@
 import Foundation
 
 class EventsHandler : RemoteHandlerProtocol{
-    func fetchData() {
+    func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
         
     }
     

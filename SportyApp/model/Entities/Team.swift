@@ -10,4 +10,17 @@ import Foundation
 
 struct Team{
     
+    var idTeam: Int
+    var intFormedYear:Int
+    var strKeywords : String
+    var strYoutube : String
+    var strStaduim : String
+    var strStadiumLocation:String
+    var strStadiumThumb: String
+    var intStadiumCapacity: Int
+    var strTeamLogo : String
+    var strTeamShort: String
+    var strTeamBadge:String
+    
+    
 }

@@ -6,4 +6,6 @@ target 'SportyApp' do
 
   # Pods for SportyApp
 
+pod 'Alamofire-SwiftyJSON'
+
 end

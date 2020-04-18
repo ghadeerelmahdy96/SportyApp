@@ -184,6 +184,7 @@
 				E3B1AC9D244A2C6500C144E6 /* Sources */,
 				E3B1AC9E244A2C6500C144E6 /* Frameworks */,
 				E3B1AC9F244A2C6500C144E6 /* Resources */,
+				12BF6ECD44FF5F9E8003825D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +243,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12BF6ECD44FF5F9E8003825D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportyApp/Pods-SportyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportyApp/Pods-SportyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportyApp/Pods-SportyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E5ABA99A6219496F2114C4A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

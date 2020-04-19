@@ -17,14 +17,12 @@ class SportsHandler : RemoteHandlerProtocol{
         Alamofire.request("https://www.thesportsdb.com/api/v1/json/1/all_sports.php")
             .responseJSON { (response) in
                  if let data = response.data {
-                    self.parseSportsJson(responseData: data)
+                    self.parseSportsJson(responseData: data,completionHandler: completionHandler)
                 }
-                
-               
         }
     }
     
-    func parseSportsJson(responseData : Data){
+    func parseSportsJson(responseData : Data ,  completionHandler:@escaping (_ result:[Any])->Void){
        
         var sportsArray = [Sport]()
         
@@ -37,6 +35,7 @@ class SportsHandler : RemoteHandlerProtocol{
                 
                 sportsArray.append(Sport(idSport: idSport, strSport: strSport, strSportThumb: strSportThumb, strSportDescription: strSportDescription))
            }
+        completionHandler(sportsArray)
        }
     }
    

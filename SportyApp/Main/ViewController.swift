@@ -13,6 +13,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let l = RepositoryImp.getInstance
+//        l.getUpcomingEvents(byLeagueId: "4328", completionHandler: {(list) in
+//             print("\(list)")
+//            })
+        l.getLeagues(bySportName: "Soccer", completionHandler: {(list) in
+                  print("\(list)")
+            })
+//        print(l.getSports(completionHandler: { (list) in
+//            print("\(list)")
+//        }))
+        
+//        let s = LeaguesHandler()
+//        s.fetchData(param: "Soccer") { (list) in
+//
+//            print(" my list \(list)\n")
+//        }
     }
 
 

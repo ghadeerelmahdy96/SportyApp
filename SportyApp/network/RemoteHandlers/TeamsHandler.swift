@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class TeamsHandler {
+class TeamsHandler : RemoteHandlerProtocol {
     func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
         let strLeagueNew = (param as!String).replacingOccurrences(of: " ", with: "%20")
         

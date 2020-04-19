@@ -3,22 +3,29 @@ PODS:
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
     - SwiftyJSON (~> 4.0.0)
+  - collection-view-layouts/Core (0.1.2)
+  - collection-view-layouts/FlickrLayout (0.1.2):
+    - collection-view-layouts/Core
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire-SwiftyJSON
+  - collection-view-layouts/Core
+  - collection-view-layouts/FlickrLayout
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Alamofire-SwiftyJSON
+    - collection-view-layouts
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
+  collection-view-layouts: f3da16bf3211ecb885bb3e45160c2267edf5b65e
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: d17d422d277c7e5673e31eefece1148c40cef819
+PODFILE CHECKSUM: f81f5cde9d307e374aaa61fdea5abdc572613f36
 
 COCOAPODS: 1.9.1

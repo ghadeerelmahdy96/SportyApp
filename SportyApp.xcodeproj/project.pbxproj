@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,11 @@
 		E3F55446244B8B450046675C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55445244B8B450046675C /* Constants.swift */; };
 		E3F55448244C6F6E0046675C /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55447244C6F6E0046675C /* RepositoryProtocol.swift */; };
 		E3F5544A244C6FBD0046675C /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55449244C6FBD0046675C /* RepositoryImp.swift */; };
+		E3F5544D244CD4E00046675C /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F5544C244CD4E00046675C /* ContentCollectionViewCell.swift */; };
+		E3F5544F244CD5550046675C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F5544E244CD5550046675C /* HeaderCollectionReusableView.swift */; };
+		E3F55451244CD5850046675C /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55450244CD5850046675C /* SportsViewController.swift */; };
+		E3F55454244CD8480046675C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E3F55453244CD8480046675C /* Kingfisher */; };
+		E3F55456244CD9FC0046675C /* CollectionViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55455244CD9FC0046675C /* CollectionViewProvider.swift */; };
 		E47D635825B62A74BD6AD911 /* Pods_SportyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +61,10 @@
 		E3F55445244B8B450046675C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E3F55447244C6F6E0046675C /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		E3F55449244C6FBD0046675C /* RepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImp.swift; sourceTree = "<group>"; };
+		E3F5544C244CD4E00046675C /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		E3F5544E244CD5550046675C /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		E3F55450244CD5850046675C /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
+		E3F55455244CD9FC0046675C /* CollectionViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F55454244CD8480046675C /* Kingfisher in Frameworks */,
 				E47D635825B62A74BD6AD911 /* Pods_SportyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +191,7 @@
 		E3B1ACBE244A2CB100C144E6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E3F5544B244CD4A90046675C /* sports */,
 				E3B1ACAA244A2C6600C144E6 /* Main.storyboard */,
 				E3B1ACA8244A2C6600C144E6 /* ViewController.swift */,
 			);
@@ -214,6 +225,17 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		E3F5544B244CD4A90046675C /* sports */ = {
+			isa = PBXGroup;
+			children = (
+				E3F5544C244CD4E00046675C /* ContentCollectionViewCell.swift */,
+				E3F5544E244CD5550046675C /* HeaderCollectionReusableView.swift */,
+				E3F55450244CD5850046675C /* SportsViewController.swift */,
+				E3F55455244CD9FC0046675C /* CollectionViewProvider.swift */,
+			);
+			path = sports;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,6 +254,9 @@
 			dependencies = (
 			);
 			name = SportyApp;
+			packageProductDependencies = (
+				E3F55453244CD8480046675C /* Kingfisher */,
+			);
 			productName = SportyApp;
 			productReference = E3B1ACA1244A2C6600C144E6 /* SportyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +285,9 @@
 				Base,
 			);
 			mainGroup = E3B1AC98244A2C6500C144E6;
+			packageReferences = (
+				E3F55452244CD8480046675C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E3B1ACA2244A2C6600C144E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,19 +359,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A4780F244B739700434B21 /* Sport.swift in Sources */,
+				E3F5544D244CD4E00046675C /* ContentCollectionViewCell.swift in Sources */,
 				E3B1ACAF244A2C6600C144E6 /* SportyApp.xcdatamodeld in Sources */,
 				08A47820244B7B4300434B21 /* Team.swift in Sources */,
 				08A47818244B7AEF00434B21 /* EventsHandler.swift in Sources */,
 				E3F5544A244C6FBD0046675C /* RepositoryImp.swift in Sources */,
+				E3F55451244CD5850046675C /* SportsViewController.swift in Sources */,
 				08A47812244B7A1700434B21 /* RemoteHandlerProtocol.swift in Sources */,
 				E3F55448244C6F6E0046675C /* RepositoryProtocol.swift in Sources */,
 				08A4781E244B7B3700434B21 /* Event.swift in Sources */,
 				E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */,
+				E3F5544F244CD5550046675C /* HeaderCollectionReusableView.swift in Sources */,
 				08A4781A244B7B0B00434B21 /* TeamsHandler.swift in Sources */,
 				08A47814244B7A9F00434B21 /* SportsHandler.swift in Sources */,
 				E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */,
 				E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */,
 				E3F55446244B8B450046675C /* Constants.swift in Sources */,
+				E3F55456244CD9FC0046675C /* CollectionViewProvider.swift in Sources */,
 				08A4781C244B7B2A00434B21 /* League.swift in Sources */,
 				08A47816244B7AC900434B21 /* LeaguesHandler.swift in Sources */,
 			);
@@ -551,6 +583,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E3F55452244CD8480046675C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E3F55453244CD8480046675C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3F55452244CD8480046675C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E3B1ACAD244A2C6600C144E6 /* SportyApp.xcdatamodeld */ = {

@@ -35,6 +35,8 @@
 		E3B1ACB4244A2C6A00C144E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACB2244A2C6A00C144E6 /* LaunchScreen.storyboard */; };
 		E3B1ACD0244A3BB000C144E6 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACCE244A3BB000C144E6 /* Details.storyboard */; };
 		E3F55446244B8B450046675C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55445244B8B450046675C /* Constants.swift */; };
+		E3F55448244C6F6E0046675C /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55447244C6F6E0046675C /* RepositoryProtocol.swift */; };
+		E3F5544A244C6FBD0046675C /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55449244C6FBD0046675C /* RepositoryImp.swift */; };
 		E47D635825B62A74BD6AD911 /* Pods_SportyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		E3B1ACB5244A2C6A00C144E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B1ACCF244A3BB000C144E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SportyApp/Main/Base.lproj/Details.storyboard; sourceTree = SOURCE_ROOT; };
 		E3F55445244B8B450046675C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E3F55447244C6F6E0046675C /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		E3F55449244C6FBD0046675C /* RepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,9 +192,10 @@
 		E3B1ACBC244A2C9500C144E6 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				08A47810244B79E100434B21 /* RemoteHandlers */,
 				08A4780D244B737800434B21 /* DataModel */,
 				08A4780C244B737000434B21 /* Entities */,
+				E3F55447244C6F6E0046675C /* RepositoryProtocol.swift */,
+				E3F55449244C6FBD0046675C /* RepositoryImp.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 		E3B1ACBD244A2C9D00C144E6 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				08A47810244B79E100434B21 /* RemoteHandlers */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -373,7 +379,9 @@
 				08A47818244B7AEF00434B21 /* EventsHandler.swift in Sources */,
 				08A4785F244CE41E00434B21 /* TeamCollectionViewCell.swift in Sources */,
 				08A47857244CCDCF00434B21 /* UpcomingCollectionViewCell.swift in Sources */,
+				E3F5544A244C6FBD0046675C /* RepositoryImp.swift in Sources */,
 				08A47812244B7A1700434B21 /* RemoteHandlerProtocol.swift in Sources */,
+				E3F55448244C6F6E0046675C /* RepositoryProtocol.swift in Sources */,
 				08A4781E244B7B3700434B21 /* Event.swift in Sources */,
 				E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */,
 				08A4781A244B7B0B00434B21 /* TeamsHandler.swift in Sources */,

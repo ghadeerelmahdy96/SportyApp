@@ -19,6 +19,5 @@ struct Event{
     var idAwayTeam : String
     var strDate : String
     var strTime : String
-    var status : Int
     
 }

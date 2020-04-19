@@ -1,0 +1,18 @@
+//
+//  TeamCollectionViewCell.swift
+//  SportyApp
+//
+//  Created by Yahya Ewida on 4/19/20.
+//  Copyright © 2020 mad40. All rights reserved.
+//
+
+import UIKit
+
+class TeamCollectionViewCell: UICollectionViewCell {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+}

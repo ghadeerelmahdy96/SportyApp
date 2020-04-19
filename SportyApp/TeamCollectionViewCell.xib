@@ -37,6 +37,10 @@
                 <constraint firstItem="UzC-un-YyZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="y3H-0B-tdg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="teamImageView" destination="UzC-un-YyZ" id="LH5-wS-vN1"/>
+                <outlet property="teamNameLabel" destination="zpm-OB-fGL" id="T5P-4l-Kit"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="127.90178571428571"/>
         </collectionViewCell>
     </objects>

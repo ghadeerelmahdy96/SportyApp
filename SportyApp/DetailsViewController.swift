@@ -32,10 +32,10 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         latestCollectionView.delegate = self
         latestCollectionView.dataSource = self
-        /*
+        
         teamsCollectionView.delegate = self
         teamsCollectionView.dataSource = self
-*/
+        
         
         // Do any additional setup after loading the view.
         let upcomingNibCell = UINib(nibName: "UpcomingCollectionViewCell", bundle: nil)
@@ -43,8 +43,10 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let latestNibCell = UINib(nibName: "LatestCollectionViewCell", bundle: nil)
         
-       latestCollectionView.register(latestNibCell, forCellWithReuseIdentifier: "LatestCollectionViewCell")
-      //  teamsCollectionView.register(upcomingNibCell, forCellWithReuseIdentifier: "UpcomingCollectionViewCell")
+        latestCollectionView.register(latestNibCell, forCellWithReuseIdentifier: "LatestCollectionViewCell")
+        
+        let teamsNibCell = UINib(nibName: "TeamCollectionViewCell", bundle: nil)
+        teamsCollectionView.register(teamsNibCell, forCellWithReuseIdentifier: "TeamCollectionViewCell")
          
          
     
@@ -126,13 +128,13 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell.homeScoreLabel.text = "1"
             return cell
               
-           }/*else if collectionView == teamsCollectionView{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCell", for: indexPath) as! TeamsCollectionViewCell
+           }else if collectionView == teamsCollectionView{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeamCollectionViewCell", for: indexPath) as! TeamCollectionViewCell
             cell.teamImageView.image = UIImage(named: "FilledStar.png")
-            cell.teamName.text = "team Name"
+            cell.teamNameLabel.text = "team Name"
             
             return cell
-           }*/
+           }
         return UICollectionViewCell()
     }
     

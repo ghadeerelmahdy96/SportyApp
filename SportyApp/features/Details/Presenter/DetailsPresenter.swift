@@ -24,4 +24,15 @@ class DetailsPresenter : DetailsPresenterProtocol{
         repository.getLatestEvents(byLeagueId: byLeagueId, completionHandler: completionHandler)
     }
     
+    func insertIntoFavoriteLeagues(league : League) -> Bool{
+        repository.insertInLocalLeagues(league: league)
+    }
+    func deleteFavoriteLeague(id : String){
+        repository.deleteLeague(id: id)
+    }
+    
+    func isFavoriteLeague(id : String) -> Bool{
+        return repository.isFavoriteLeague(id: id)
+    }
+    
 }

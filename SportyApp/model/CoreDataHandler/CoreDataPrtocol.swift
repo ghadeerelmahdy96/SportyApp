@@ -9,7 +9,8 @@
 import Foundation
 
 protocol CoreDataPrtocol {
-    func insertInLocalLeagues(league LeagueValue:League)  -> League
+    func insertInLocalLeagues(league LeagueValue:League) -> Bool
     func getFavouriteLeagues() -> [League]
     func deleteLeague(id : String)
+    func isFavoriteLeague(id : String) -> Bool
 }

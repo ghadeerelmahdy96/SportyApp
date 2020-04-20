@@ -22,7 +22,7 @@ class CoreDataHandler : CoreDataPrtocol{
         return instance
     }
            
-    func insertInLocalLeagues(league LeagueValue:League)  -> League {
+    func insertInLocalLeagues(league LeagueValue:League)  -> Bool {
         let entity = NSEntityDescription.entity(forEntityName: favouriteLeaguesTableName, in: managedContext!)
         var leagueNSManagedObject = NSManagedObject(entity: entity!, insertInto: managedContext!)
         
@@ -33,8 +33,9 @@ class CoreDataHandler : CoreDataPrtocol{
         }
         catch{
             print("error in insertInLocalLeagues")
+            return false
         }
-        return LeagueValue
+        return true
     }
     
      func getFavouriteLeagues() -> [League] {
@@ -121,5 +122,12 @@ class CoreDataHandler : CoreDataPrtocol{
         }
        return  nil
        }
+    
+    func isFavoriteLeague(id : String) -> Bool{
+        if (fetchLeagueById(id: id) != nil){
+            return true
+        }
+        return false
+    }
     
 }

@@ -29,12 +29,13 @@
 		08A47865244DE4BB00434B21 /* CoreDataPrtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47864244DE4BB00434B21 /* CoreDataPrtocol.swift */; };
 		08A47868244DE69300434B21 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47867244DE69300434B21 /* DetailsPresenter.swift */; };
 		08A47870244DE96D00434B21 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A4786E244DE96D00434B21 /* Details.storyboard */; };
-		08A47872244DEA7800434B21 /* DetailsControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47871244DEA7800434B21 /* DetailsControllerProtocol.swift */; };
 		08A47874244DEAC100434B21 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47873244DEAC100434B21 /* CollectionViewExtension.swift */; };
 		08A47876244DECA500434B21 /* DetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47875244DECA500434B21 /* DetailsPresenterProtocol.swift */; };
 		08A47878244E0AAE00434B21 /* UpComingEventsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47877244E0AAE00434B21 /* UpComingEventsExtension.swift */; };
 		08A4787A244E0D3900434B21 /* LatestEventsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47879244E0D3900434B21 /* LatestEventsExtension.swift */; };
 		08A4787C244E0FF400434B21 /* TeamsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4787B244E0FF400434B21 /* TeamsExtension.swift */; };
+		08A47883244E57DF00434B21 /* santiagu_bernabeau.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08A47882244E57DF00434B21 /* santiagu_bernabeau.jpg */; };
+		08A47885244E587D00434B21 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47884244E587D00434B21 /* TeamTableViewController.swift */; };
 		E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA4244A2C6600C144E6 /* AppDelegate.swift */; };
 		E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA6244A2C6600C144E6 /* SceneDelegate.swift */; };
 		E3B1ACA9244A2C6600C144E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACA8244A2C6600C144E6 /* ViewController.swift */; };
@@ -81,12 +82,13 @@
 		08A47864244DE4BB00434B21 /* CoreDataPrtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPrtocol.swift; sourceTree = "<group>"; };
 		08A47867244DE69300434B21 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		08A4786F244DE96D00434B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SportyApp/Main/Base.lproj/Details.storyboard; sourceTree = "<group>"; };
-		08A47871244DEA7800434B21 /* DetailsControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsControllerProtocol.swift; sourceTree = "<group>"; };
 		08A47873244DEAC100434B21 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		08A47875244DECA500434B21 /* DetailsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenterProtocol.swift; sourceTree = "<group>"; };
 		08A47877244E0AAE00434B21 /* UpComingEventsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingEventsExtension.swift; sourceTree = "<group>"; };
 		08A47879244E0D3900434B21 /* LatestEventsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestEventsExtension.swift; sourceTree = "<group>"; };
 		08A4787B244E0FF400434B21 /* TeamsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsExtension.swift; sourceTree = "<group>"; };
+		08A47882244E57DF00434B21 /* santiagu_bernabeau.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = santiagu_bernabeau.jpg; sourceTree = "<group>"; };
+		08A47884244E587D00434B21 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EB294BEE8C31B73025DD47 /* Pods-SportyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.release.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFA4B61F650F1AA8631C8A16 /* Pods-SportyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.debug.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				08A4782E244C8D5200434B21 /* EmptyStar.png */,
 				08A4782D244C8D5200434B21 /* FilledStar.png */,
+				08A47882244E57DF00434B21 /* santiagu_bernabeau.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,7 +202,6 @@
 				08A4786D244DE71300434B21 /* ViewController */,
 				08A4786C244DE6EF00434B21 /* CustomCellsFiles */,
 				08A4786B244DE6CD00434B21 /* NibFiles */,
-				08A4786A244DE6BD00434B21 /* Storyboard */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -236,13 +238,20 @@
 			isa = PBXGroup;
 			children = (
 				08A47841244CA33B00434B21 /* DetailsViewController.swift */,
-				08A47871244DEA7800434B21 /* DetailsControllerProtocol.swift */,
 				08A47873244DEAC100434B21 /* CollectionViewExtension.swift */,
 				08A47877244E0AAE00434B21 /* UpComingEventsExtension.swift */,
 				08A47879244E0D3900434B21 /* LatestEventsExtension.swift */,
 				08A4787B244E0FF400434B21 /* TeamsExtension.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		08A4787F244E554400434B21 /* TeamDetails */ = {
+			isa = PBXGroup;
+			children = (
+				08A47884244E587D00434B21 /* TeamTableViewController.swift */,
+			);
+			path = TeamDetails;
 			sourceTree = "<group>";
 		};
 		59E63F5FAE72BD1A82DB3C99 /* Frameworks */ = {
@@ -348,8 +357,10 @@
 		E3B1ACCD244A3AE300C144E6 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				08A4787F244E554400434B21 /* TeamDetails */,
 				08A47866244DE67F00434B21 /* Presenter */,
 				08A47869244DE6AE00434B21 /* Design */,
+				08A4786A244DE6BD00434B21 /* Storyboard */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -447,8 +458,8 @@
 				08A4785C244CDEAB00434B21 /* LatestCollectionViewCell.xib in Resources */,
 				E3B1ACB1244A2C6A00C144E6 /* Assets.xcassets in Resources */,
 				E3B1ACAC244A2C6600C144E6 /* Main.storyboard in Resources */,
+				08A47883244E57DF00434B21 /* santiagu_bernabeau.jpg in Resources */,
 				E3F55461244DF8750046675C /* LeagueCell.xib in Resources */,
-				E3B1ACD0244A3BB000C144E6 /* Details.storyboard in Resources */,
 				08A4782F244C8D5300434B21 /* FilledStar.png in Resources */,
 				08A47860244CE41E00434B21 /* TeamCollectionViewCell.xib in Resources */,
 				08A47858244CCDCF00434B21 /* UpcomingCollectionViewCell.xib in Resources */,
@@ -535,13 +546,13 @@
 				E3B1ACA5244A2C6600C144E6 /* AppDelegate.swift in Sources */,
 				E3B1ACA7244A2C6600C144E6 /* SceneDelegate.swift in Sources */,
 				E3F55446244B8B450046675C /* Constants.swift in Sources */,
-				08A47872244DEA7800434B21 /* DetailsControllerProtocol.swift in Sources */,
 				E3F55456244CD9FC0046675C /* CollectionViewProvider.swift in Sources */,
 				08A4781C244B7B2A00434B21 /* League.swift in Sources */,
 				08A4785B244CDEAB00434B21 /* LatestCollectionViewCell.swift in Sources */,
 				08A47816244B7AC900434B21 /* LeaguesHandler.swift in Sources */,
 				08A47842244CA33B00434B21 /* DetailsViewController.swift in Sources */,
 				E3F55460244DF8750046675C /* LeagueCell.swift in Sources */,
+				08A47885244E587D00434B21 /* TeamTableViewController.swift in Sources */,
 				E3F55458244DC1900046675C /* SportsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

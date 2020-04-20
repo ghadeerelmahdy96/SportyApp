@@ -13,12 +13,14 @@ class RepositoryImp : RepositoryProtocol {
     private let eventsHandler : RemoteHandlerProtocol
     private let teamsHandler : RemoteHandlerProtocol
     static let getInstance = RepositoryImp()
+    private let coreDataHandler : CoreDataPrtocol
        
     private init() {
-           sportsHandler = SportsHandler()
-           leaguesHandler = LeaguesHandler()
-           eventsHandler = EventsHandler()
-           teamsHandler = TeamsHandler()
+       sportsHandler = SportsHandler()
+       leaguesHandler = LeaguesHandler()
+       eventsHandler = EventsHandler()
+       teamsHandler = TeamsHandler()
+       coreDataHandler = CoreDataHandler.getCoreHandlerInstance()
     }
     func getSports(completionHandler:@escaping (_ result:[Sport])->Void)  {
         sportsHandler.fetchData(param: "") { (sportsList) in
@@ -57,5 +59,16 @@ class RepositoryImp : RepositoryProtocol {
         }
     }
     
+    func insertInLocalLeagues(league leagueValue: League) -> League {
+        return coreDataHandler.insertInLocalLeagues(league: leagueValue)
+    }
+       
+   func getFavouriteLeagues() -> [League] {
+        return coreDataHandler.getFavouriteLeagues()
+   }
+       
+   func deleteLeague(id: String) {
+        coreDataHandler.deleteLeague(id: id)
+   }
     
 }

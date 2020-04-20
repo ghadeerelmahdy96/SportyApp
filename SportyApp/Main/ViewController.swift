@@ -30,6 +30,14 @@ class ViewController: UIViewController {
 //
 //            print(" my list \(list)\n")
 //        }
+        
+        let league = League(idLeague: "2", strLeague: "La League", strSport: "Soccer", strBadge: "dsadsadsasd", strYoutube: "youtube.com")
+        CoreDataHandler.getCoreHandlerInstance().insertInLocalLeagues(league: league)
+        
+        CoreDataHandler.getCoreHandlerInstance().deleteLeague(id : "1")
+        
+        let leagues = CoreDataHandler.getCoreHandlerInstance().getFavouriteLeagues()
+        print(leagues)
     }
 
 

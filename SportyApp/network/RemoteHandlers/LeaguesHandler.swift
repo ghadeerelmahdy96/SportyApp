@@ -20,9 +20,8 @@ class LeaguesHandler : RemoteHandlerProtocol{
     }
     func parseResultDic(param: Any,arr : [JSON],completionHandler:@escaping (_ leagues:[League])->Void)
       {
-       // let group = DispatchGroup()
+
         var leagueList : [League] = []
-       // group.enter()
         for json in arr {
             let dic = json.dictionaryObject!
             let strSport = dic["strSport"] as! String
@@ -37,12 +36,10 @@ class LeaguesHandler : RemoteHandlerProtocol{
                       let league = League(idLeague: idleague ?? "null" , strLeague: strLeague ?? "null", strSport: strSport ?? "null", strBadge: strBadge ?? "null", strYoutube: strYoutube ?? "null")
                      leagueList.append(league)
                      completionHandler(leagueList)
-                  //   group.leave()
                      
                   })
           }
-        }   
-       // group.wait()
+        }
        
     }
 }

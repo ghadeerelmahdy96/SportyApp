@@ -12,33 +12,39 @@ import Alamofire
 import SwiftyJSON
 class LeaguesHandler : RemoteHandlerProtocol{
     func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
-        var leagueList : [League] = []
              requestJson(url: "\(BASE_URL)all_leagues.php",key: "leagues",completionHandler: { (arr) in
-                 for json in arr {
-                   let dic = json.dictionaryObject!
-                   let strSport = dic["strSport"] as! String
-                   if(strSport == param as! String ){
-                       self.parseResultDic(dic: dic, completionHandler: { (league) in
-                          leagueList.append(league)
-                        completionHandler(leagueList)
+                self.parseResultDic(param : param,arr : arr, completionHandler: { (leagueList) in
+                          completionHandler(leagueList)
                        })
-                   }
-                 }      
              })
     }
-  func parseResultDic(dic : Dictionary<String,Any>,completionHandler:@escaping (_ leagues:League)->Void)
+    func parseResultDic(param: Any,arr : [JSON],completionHandler:@escaping (_ leagues:[League])->Void)
       {
-          let idleague = dic["idLeague"] as? String
-        requestJson(url: "\(BASE_URL)lookupleague.php?id=\(Int.init(idleague!) ?? -1)",key: "leagues",completionHandler: { (arr) in
-              let dic = arr[0].dictionaryObject!
-              let strLeague = dic["strLeague"] as? String
-              let strSport = dic["strSport"] as? String
-              let strBadge = dic["strBadge"] as? String
-              let strYoutube = dic["strYoutube"] as? String
-              let league = League(idLeague: idleague ?? "null" , strLeague: strLeague ?? "null", strSport: strSport ?? "null", strBadge: strBadge ?? "null", strYoutube: strYoutube ?? "null")
-             completionHandler(league)
-          })
-      }
+       // let group = DispatchGroup()
+        var leagueList : [League] = []
+       // group.enter()
+        for json in arr {
+            let dic = json.dictionaryObject!
+            let strSport = dic["strSport"] as! String
+            if(strSport == param as! String ){
+                let idleague = dic["idLeague"] as? String
+                requestJson(url: "\(BASE_URL)lookupleague.php?id=\(Int.init(idleague!) ?? -1)",key: "leagues",completionHandler: { (arr) in
+                      let dic = arr[0].dictionaryObject!
+                      let strLeague = dic["strLeague"] as? String
+                      let strSport = dic["strSport"] as? String
+                      let strBadge = dic["strBadge"] as? String
+                      let strYoutube = dic["strYoutube"] as? String
+                      let league = League(idLeague: idleague ?? "null" , strLeague: strLeague ?? "null", strSport: strSport ?? "null", strBadge: strBadge ?? "null", strYoutube: strYoutube ?? "null")
+                     leagueList.append(league)
+                     completionHandler(leagueList)
+                  //   group.leave()
+                     
+                  })
+          }
+        }   
+       // group.wait()
+       
+    }
 }
 
 extension RemoteHandlerProtocol {

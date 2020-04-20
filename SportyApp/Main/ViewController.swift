@@ -17,10 +17,10 @@ class ViewController: UIViewController {
 //        l.getUpcomingEvents(byLeagueId: "4328", completionHandler: {(list) in
 //             print("\(list)")
 //            })
-        l.getLeagues(bySportName: "Motorsport", completionHandler: {(list) in
-                  print("my list \(list)\n")
-            print(list.count)
-            })
+//        l.getLeagues(bySportName: "Motorsport", completionHandler: {(list) in
+//                  print("my list \(list)\n")
+//            print(list.count)
+//            })
 //        print(l.getSports(completionHandler: { (list) in
 //            print("\(list)")
 //        }))

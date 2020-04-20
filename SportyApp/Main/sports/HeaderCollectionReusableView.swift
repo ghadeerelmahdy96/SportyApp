@@ -12,7 +12,6 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var headerTitleLabel: UILabel!
     func populate(with item: String) {
         headerTitleLabel.text = item
-
     }
     
 }

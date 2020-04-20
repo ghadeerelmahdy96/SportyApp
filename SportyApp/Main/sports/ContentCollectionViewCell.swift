@@ -16,6 +16,5 @@ class ContentCollectionViewCell: UICollectionViewCell {
          sportTitleLabel.text = sport
          let url = URL(string: img )
         sportImageView.kf.setImage(with: url)
-        backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
      }
 }

@@ -6,12 +6,15 @@ PODS:
   - collection-view-layouts/Core (0.1.2)
   - collection-view-layouts/FlickrLayout (0.1.2):
     - collection-view-layouts/Core
+  - collection-view-layouts/PinterestLayout (0.1.2):
+    - collection-view-layouts/Core
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire-SwiftyJSON
   - collection-view-layouts/Core
   - collection-view-layouts/FlickrLayout
+  - collection-view-layouts/PinterestLayout
 
 SPEC REPOS:
   trunk:
@@ -26,6 +29,6 @@ SPEC CHECKSUMS:
   collection-view-layouts: f3da16bf3211ecb885bb3e45160c2267edf5b65e
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: f81f5cde9d307e374aaa61fdea5abdc572613f36
+PODFILE CHECKSUM: 378568364c75e5ae0c92aca596d5c21496cab1a5
 
 COCOAPODS: 1.9.1

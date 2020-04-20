@@ -8,5 +8,6 @@ target 'SportyApp' do
 
 pod 'Alamofire-SwiftyJSON'
 pod 'collection-view-layouts/FlickrLayout'
+ pod 'collection-view-layouts/PinterestLayout'
  pod 'collection-view-layouts/Core'
 end

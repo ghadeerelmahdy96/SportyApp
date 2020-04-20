@@ -11,4 +11,9 @@ import Foundation
 let BASE_URL = "https://www.thesportsdb.com/api/v1/json/1/"
 let UPCOMING_EVENT = 1
 let LATEST_EVENT = 2
+let favouriteLeaguesTableName = "FavouriteLeagues"
+let upcomingCellName = "UpcomingCollectionViewCell"
+let latestCellName = "LatestCollectionViewCell"
+let teamCellName = "TeamCollectionViewCell"
+
 

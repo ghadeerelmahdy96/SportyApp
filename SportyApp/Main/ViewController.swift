@@ -17,10 +17,10 @@ class ViewController: UIViewController {
 //        l.getUpcomingEvents(byLeagueId: "4328", completionHandler: {(list) in
 //             print("\(list)")
 //            })
-        l.getLeagues(bySportName: "Motorsport", completionHandler: {(list) in
-                  print("my list \(list)\n")
-            print(list.count)
-            })
+//        l.getLeagues(bySportName: "Motorsport", completionHandler: {(list) in
+//                  print("my list \(list)\n")
+//            print(list.count)
+//            })
 //        print(l.getSports(completionHandler: { (list) in
 //            print("\(list)")
 //        }))
@@ -30,6 +30,14 @@ class ViewController: UIViewController {
 //
 //            print(" my list \(list)\n")
 //        }
+        
+        let league = League(idLeague: "2", strLeague: "La League", strSport: "Soccer", strBadge: "dsadsadsasd", strYoutube: "youtube.com")
+        CoreDataHandler.getCoreHandlerInstance().insertInLocalLeagues(league: league)
+        
+        CoreDataHandler.getCoreHandlerInstance().deleteLeague(id : "1")
+        
+        let leagues = CoreDataHandler.getCoreHandlerInstance().getFavouriteLeagues()
+        print(leagues)
     }
 
 

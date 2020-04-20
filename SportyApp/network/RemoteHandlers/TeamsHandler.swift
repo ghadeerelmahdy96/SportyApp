@@ -17,11 +17,12 @@ class TeamsHandler : RemoteHandlerProtocol {
        Alamofire.request("https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=\(strLeagueNew)")
                 .responseJSON { (response) in
                     if let data = response.data {
-                       self.parseSportsJson(responseData: data)
+                       let teamsArary = self.parseSportsJson(responseData: data)
+                       completionHandler(teamsArary)                    
                    }
                }
     }
-    func parseSportsJson(responseData : Data){
+    func parseSportsJson(responseData : Data) -> [Team]{
         
         var teamsArray = [Team]()
         
@@ -38,12 +39,12 @@ class TeamsHandler : RemoteHandlerProtocol {
             let strTeamLogo = team["strTeamLogo"].stringValue
             let strTeamShort = team["strTeamShort"].stringValue
             let strTeamBadge = team["strTeamBadge"].stringValue
-                        
-            teamsArray.append(Team(idTeam: idTeam, intFormedYear: intFormedYear, strKeywords: strKeywords, strYoutube: strYoutube, strStaduim: strStaduim, strStadiumLocation: strStadiumLocation, strStadiumThumb: strStadiumThumb, intStadiumCapacity: intStadiumCapacity, strTeamLogo: strTeamLogo, strTeamShort: strTeamShort, strTeamBadge: strTeamBadge))
+            let strTeam = team["strTeam"].stringValue
+            teamsArray.append(Team(idTeam: idTeam, intFormedYear: intFormedYear, strKeywords: strKeywords, strYoutube: strYoutube, strStaduim: strStaduim, strStadiumLocation: strStadiumLocation, strStadiumThumb: strStadiumThumb, intStadiumCapacity: intStadiumCapacity, strTeamLogo: strTeamLogo, strTeamShort: strTeamShort, strTeamBadge: strTeamBadge,strTeam: strTeam))
         
             }
-             print(teamsArray)
         }
+        return teamsArray
     }
     
     

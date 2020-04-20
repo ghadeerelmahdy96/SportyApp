@@ -13,4 +13,9 @@ protocol RepositoryProtocol {
     func getLatestEvents(byLeagueId: String,completionHandler:@escaping (_ result:[Event])->Void)
     func getUpcomingEvents(byLeagueId: String,completionHandler:@escaping (_ result:[Event])->Void)
     func getTeams(byLeagueId: String,completionHandler:@escaping (_ result:[Team])->Void)
+    
+    //CoreData
+    func insertInLocalLeagues(league leagueValue:League)  -> League
+    func getFavouriteLeagues() -> [League]
+    func deleteLeague(id : String)
 }

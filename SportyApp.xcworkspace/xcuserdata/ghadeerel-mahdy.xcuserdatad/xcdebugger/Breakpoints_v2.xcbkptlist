@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8DE26C1D-09F6-4CDD-B9B7-DD21B243ADB7"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "994F8BE2-C2E2-416D-A29B-DD3DA4787D02"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyApp/network/RemoteHandlers/LeaguesHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetchData(param:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "994F8BE2-C2E2-416D-A29B-DD3DA4787D02 - 53e216a2005b3c90"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[4] = Value Promoted from Box&gt; of closure #1 (Swift.Array&lt;SwiftyJSON.JSON&gt;) -&gt; () in SportyApp.LeaguesHandler.fetchData(param: Any, completionHandler: (Swift.Array&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SportyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ghadeerel-mahdy/Documents/iti/ios/swift/SportyApp/SportyApp/network/RemoteHandlers/LeaguesHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1902">
+               </Location>
+               <Location
+                  uuid = "994F8BE2-C2E2-416D-A29B-DD3DA4787D02 - f0e4cac7c723b34"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;SportyApp.League&gt;) -&gt; () in closure #1 (Swift.Array&lt;SwiftyJSON.JSON&gt;) -&gt; () in SportyApp.LeaguesHandler.fetchData(param: Any, completionHandler: (Swift.Array&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SportyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ghadeerel-mahdy/Documents/iti/ios/swift/SportyApp/SportyApp/network/RemoteHandlers/LeaguesHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C3CD419-38E0-480F-BBF1-6F59ED1A723E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyApp/network/RemoteHandlers/LeaguesHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "parseResultDic(param:arr:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

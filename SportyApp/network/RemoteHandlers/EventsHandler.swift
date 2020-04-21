@@ -40,10 +40,10 @@ class EventsHandler : RemoteHandlerProtocol{
           let strTime = dic["strTime"] as? String
       requestJson(url: "\(BASE_URL)lookupteam.php?id=\(Int.init(idHomeTeam!) ?? -1)",key: "teams",completionHandler: { (arr) in
              let dicHome = arr[0].dictionaryObject!
-        strHomeTeamLogo = dicHome["strTeamLogo"] as? String ?? "null"
+        strHomeTeamLogo = dicHome["strTeamBadge"] as? String ?? "null"
         self.requestJson(url: "\(BASE_URL)lookupteam.php?id=\(Int.init(idAwayTeam!) ?? -1)",key: "teams",completionHandler: { (arr) in
                     let dicAway = arr[0].dictionaryObject!
-        strAwayTeamLogo = dicAway["strTeamLogo"] as? String ?? "null"
+        strAwayTeamLogo = dicAway["strTeamBadge"] as? String ?? "null"
           eventList.append(Event(idEvent: idEvent ?? "null", strEvent: strEvent ?? "null", strHomeTeam: strHomeTeam ?? "null", strAwayTeam: strAwayTeam ?? "null", intHomeScore: intHomeScore  ?? "null", intAwayScore: intAwayScore ?? "null", idHomeTeam: idHomeTeam ?? "null", idAwayTeam: idAwayTeam ?? "null", strDate: strDate ?? "null", strTime: strTime ?? "null",strHomeTeamLogo: strHomeTeamLogo , strAwayTeamLogo: strAwayTeamLogo))
         completionHandler(eventList)
       })
@@ -51,7 +51,12 @@ class EventsHandler : RemoteHandlerProtocol{
     })
     }
      }
-  
+    func test(){
+        
+        
+        
+    
+    }
 }
 //    func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
 //        let search = param as! Dictionary<String, Int>

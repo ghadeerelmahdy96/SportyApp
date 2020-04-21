@@ -27,8 +27,7 @@ class DetailsViewController: UIViewController{
     var teamsArray = [Team]()
     var leagueFromMain : League?
     var emptyStarImage = UIImage(named: "EmptyStar.png")
-    var filledStarImage = UIImage(named: "FilledStar.png")
-    
+    var filledStarImage = UIImage(named: "FilledStar.png")    
     
     //Functions
         
@@ -46,7 +45,7 @@ class DetailsViewController: UIViewController{
         getUpComingEvents(leagueId : leagueFromMain?.idLeague ?? "")
         getLatestEvents(leagueId: leagueFromMain?.idLeague ?? "")
         
-        
+        print(upcomingEventsArray)
                 
     }
     

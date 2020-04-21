@@ -32,6 +32,8 @@ extension DetailsViewController{
         cell.homeTeamLabel.text = upcomingEventsArray[index].strHomeTeam
         cell.dateLabel.text = upcomingEventsArray[index].strDate
         cell.timeLabel.text = upcomingEventsArray[index].strTime
-        //cell.homeImageView.kf.setImage(with: URL(string: upcomingEventsArray[index].home))
+        cell.homeImageView.kf.setImage(with: URL(string: upcomingEventsArray[index].strHomeTeamLogo),placeholder: UIImage(named: ""))
+        cell.awayImageView.kf.setImage(with: URL(string: upcomingEventsArray[index].strAwayTeamLogo),placeholder: UIImage(named: ""))
+        cell.vsLabel.text = "VS"
     }
 }

@@ -68,10 +68,10 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == teamsCollectionView{
             let storyboard = UIStoryboard(name: "Details", bundle: nil)
-               let controller = storyboard.instantiateViewController(identifier: "teamDetailsView") as! TeamTableViewController
-                    controller.teamFromLeagueDetails = teamsArray[indexPath.row]
-                    controller.modalPresentationStyle = .fullScreen
-                    self.present(controller, animated: true, completion: nil)
+            let controller = storyboard.instantiateViewController(identifier: "teamDetailsView") as! TeamsTableViewController
+            controller.teamFromLeagueDetails = teamsArray[indexPath.row]
+            controller.modalPresentationStyle = .fullScreen
+            self.present(controller, animated: true, completion: nil)
         }
     }
     

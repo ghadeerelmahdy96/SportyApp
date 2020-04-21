@@ -32,7 +32,7 @@ class TeamsHandler : RemoteHandlerProtocol {
             let intFormedYear = team["intFormedYear"].intValue
             let strKeywords = team["strKeywords"].stringValue
             let strYoutube = team["strYoutube"].stringValue
-            let strStaduim = team["strStaduim"].stringValue
+            let strStaduim = team["strStadium"].stringValue
             let strStadiumLocation = team["strStadiumLocation"].stringValue
             let strStadiumThumb = team["strStadiumThumb"].stringValue
             let intStadiumCapacity = team["intStadiumCapacity"].intValue
@@ -40,7 +40,7 @@ class TeamsHandler : RemoteHandlerProtocol {
             let strTeamShort = team["strTeamShort"].stringValue
             let strTeamBadge = team["strTeamBadge"].stringValue
             let strTeam = team["strTeam"].stringValue
-            teamsArray.append(Team(idTeam: idTeam, intFormedYear: intFormedYear, strKeywords: strKeywords, strYoutube: strYoutube, strStaduim: strStaduim, strStadiumLocation: strStadiumLocation, strStadiumThumb: strStadiumThumb, intStadiumCapacity: intStadiumCapacity, strTeamLogo: strTeamLogo, strTeamShort: strTeamShort, strTeamBadge: strTeamBadge,strTeam: strTeam))
+            teamsArray.append(Team(idTeam: idTeam, intFormedYear: intFormedYear, strKeywords: strKeywords, strYoutube: strYoutube, strStadium: strStaduim, strStadiumLocation: strStadiumLocation, strStadiumThumb: strStadiumThumb, intStadiumCapacity: intStadiumCapacity, strTeamLogo: strTeamLogo, strTeamShort: strTeamShort, strTeamBadge: strTeamBadge,strTeam: strTeam))
         
             }
         }

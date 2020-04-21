@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+import Alamofire
+import SwiftyJSON
 class EventsHandler : RemoteHandlerProtocol{
     func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
         let search = param as! Dictionary<String, Int>
@@ -17,10 +18,11 @@ class EventsHandler : RemoteHandlerProtocol{
         requestJson(url: "\(BASE_URL)events\(eventStatus)league.php?id=\(idLeague)", key: "events") { (arr) in
             for json in arr {
               let dic = json.dictionaryObject!
-              let event = self.parseResultDic(dic: dic)
+              var event = self.parseResultDic(dic: dic)
                // print("event \(event)")
                   eventList.append(event)
             }
+           //self.completeTeamDetailsInEvent(eventList: eventList)
            completionHandler(eventList)
         }
     }
@@ -36,7 +38,35 @@ class EventsHandler : RemoteHandlerProtocol{
             let strDate = dic["dateEvent"] as? String
           let strTime = dic["strTime"] as? String
         
-         return  Event(idEvent: idEvent ?? "null", strEvent: strEvent ?? "null", strHomeTeam: strHomeTeam ?? "null", strAwayTeam: strAwayTeam ?? "null", intHomeScore: intHomeScore  ?? "null", intAwayScore: intAwayScore ?? "null", idHomeTeam: idHomeTeam ?? "null", idAwayTeam: idAwayTeam ?? "null", strDate: strDate ?? "null", strTime: strTime ?? "null")
+         return  Event(idEvent: idEvent ?? "null", strEvent: strEvent ?? "null", strHomeTeam: strHomeTeam ?? "null", strAwayTeam: strAwayTeam ?? "null", intHomeScore: intHomeScore  ?? "null", intAwayScore: intAwayScore ?? "null", idHomeTeam: idHomeTeam ?? "null", idAwayTeam: idAwayTeam ?? "null", strDate: strDate ?? "null", strTime: strTime ?? "null",strHomeTeamLogo: "" , strAwayTeamLogo: "")
      }
+    
+    private func getTeamDetails(teamId :String) -> String{
+       
+        
+            
+        var value = ""
+        DispatchQueue.global().sync {
+            Alamofire.request("https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=\(teamId)")
+                          .responseJSON { (response) in
+                               if let data = response.data {
+                                  if let teamDetailsArray = try? JSON(data: data) {
+                                           for team in teamDetailsArray["teams"].arrayValue {
+                                            value = team["strTeamLogo"].stringValue
+                                    }
+                                }
+                              }
+            }
+        }
+    
+        return value
+    }
+    private func completeTeamDetailsInEvent(eventList : [Event]){
+        
+        for var event in eventList{
+            event.strHomeTeamLogo = getTeamDetails(teamId: event.idHomeTeam)
+        }
+    }
 
+    
 }

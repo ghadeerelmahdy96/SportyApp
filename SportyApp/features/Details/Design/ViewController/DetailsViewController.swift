@@ -46,6 +46,7 @@ class DetailsViewController: UIViewController{
         getUpComingEvents(leagueId : leagueFromMain?.idLeague ?? "")
         getLatestEvents(leagueId: leagueFromMain?.idLeague ?? "")
         
+        
                 
     }
     

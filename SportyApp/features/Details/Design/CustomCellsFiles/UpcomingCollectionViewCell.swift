@@ -18,6 +18,8 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var homeImageView: UIImageView!
+    @IBOutlet weak var awayImageView: UIImageView!
     @IBOutlet weak var vsLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

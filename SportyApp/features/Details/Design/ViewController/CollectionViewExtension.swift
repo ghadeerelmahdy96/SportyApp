@@ -20,7 +20,7 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
           }else if collectionView == latestCollectionView{
                return CGSize(width: 269, height: 209)
           }else if collectionView == teamsCollectionView{
-               return CGSize(width: 218, height: 209)
+               return CGSize(width: 192, height: 152)
           }
         return CGSize(width: 296, height: 209)
     }
@@ -36,9 +36,6 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
             return teamsArray.count
        }
         return 0
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
     
@@ -66,6 +63,16 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
             return cell
            }
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == teamsCollectionView{
+            let storyboard = UIStoryboard(name: "Details", bundle: nil)
+               let controller = storyboard.instantiateViewController(identifier: "teamDetailsView") as! TeamTableViewController
+                    controller.teamFromLeagueDetails = teamsArray[indexPath.row]
+                    controller.modalPresentationStyle = .fullScreen
+                    self.present(controller, animated: true, completion: nil)
+        }
     }
     
     

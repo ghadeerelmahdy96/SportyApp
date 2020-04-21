@@ -18,6 +18,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        teamImageView.layer.cornerRadius = teamImageView.frame.size.width / 2
     }
 
 }

@@ -59,7 +59,7 @@ class RepositoryImp : RepositoryProtocol {
         }
     }
     
-    func insertInLocalLeagues(league leagueValue: League) -> League {
+    func insertInLocalLeagues(league leagueValue: League) -> Bool {
         return coreDataHandler.insertInLocalLeagues(league: leagueValue)
     }
        
@@ -70,5 +70,8 @@ class RepositoryImp : RepositoryProtocol {
    func deleteLeague(id: String) {
         coreDataHandler.deleteLeague(id: id)
    }
+    func isFavoriteLeague(id : String) -> Bool{
+        return coreDataHandler.isFavoriteLeague(id: id)
+    }
     
 }

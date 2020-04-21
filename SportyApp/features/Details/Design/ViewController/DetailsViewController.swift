@@ -8,34 +8,46 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController , DetailsControllerProtocol{
+class DetailsViewController: UIViewController{
 
     //Outlets
     
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     @IBOutlet weak var latestCollectionView: UICollectionView!
     @IBOutlet weak var teamsCollectionView: UICollectionView!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     //Variables
     
+    var navigation : UINavigationController = UINavigationController.init()
     var detailsPresenter = DetailsPresenter()
     var activityIndicator : UIActivityIndicatorView = UIActivityIndicatorView()
     var upcomingEventsArray = [Event]()
     var latestEventsArray = [Event]()
     var teamsArray = [Team]()
-    var league = "English Premier League"
-    var leagueId = "4328"
     var leagueFromMain : League?
+    var emptyStarImage = UIImage(named: "EmptyStar.png")
+    var filledStarImage = UIImage(named: "FilledStar.png")
+    
+    
     //Functions
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        if detailsPresenter.isFavoriteLeague(id: leagueFromMain?.idLeague ?? ""){
+            favoriteButton.setImage(filledStarImage, for: .normal)
+        }
+        
         initializeCollectionViews()
         initializeActivityIndicator()
-        getTeams(leagueName: league)
-        getUpComingEvents(leagueId : leagueId)
-        getLatestEvents(leagueId: leagueId)
+        getTeams(leagueName: leagueFromMain?.strLeague ?? "")
+        getUpComingEvents(leagueId : leagueFromMain?.idLeague ?? "")
+        getLatestEvents(leagueId: leagueFromMain?.idLeague ?? "")
+        
+        
+                
     }
     
     private func initializeActivityIndicator(){
@@ -52,6 +64,7 @@ class DetailsViewController: UIViewController , DetailsControllerProtocol{
         teamsCollectionView.isUserInteractionEnabled = false
         
         self.view.addSubview(activityIndicator)
+        
     }
     
     private func initializeCollectionViews(){
@@ -84,4 +97,21 @@ class DetailsViewController: UIViewController , DetailsControllerProtocol{
     }
      
 
+    @IBAction func favoriteButtonAction(_ sender: Any) {
+        if favoriteButton.currentImage == filledStarImage{
+            detailsPresenter.deleteFavoriteLeague(id: leagueFromMain?.idLeague ?? "")
+            favoriteButton.setImage(emptyStarImage, for: .normal)
+            
+          }else{
+            let result = detailsPresenter.insertIntoFavoriteLeagues(league: leagueFromMain!)
+            if result{
+                favoriteButton.setImage(filledStarImage, for: .normal)
+                print(CoreDataHandler.getCoreHandlerInstance().getFavouriteLeagues())
+
+            }else{
+                print("error in adding to favorites")
+            }
+        }
+    }
+      
 }

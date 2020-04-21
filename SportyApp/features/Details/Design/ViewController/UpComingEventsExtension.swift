@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 extension DetailsViewController{
     
@@ -19,6 +20,7 @@ extension DetailsViewController{
                self.upcomingCollectionView.reloadData()
                self.activityIndicator.stopAnimating()
                self.upcomingCollectionView.isUserInteractionEnabled = true
+            print(self.upcomingEventsArray)
            }
        }
        detailsPresenter.getUpcomingEvents(byLeagueId: leagueId, completionHandler: closure)
@@ -30,5 +32,6 @@ extension DetailsViewController{
         cell.homeTeamLabel.text = upcomingEventsArray[index].strHomeTeam
         cell.dateLabel.text = upcomingEventsArray[index].strDate
         cell.timeLabel.text = upcomingEventsArray[index].strTime
+        //cell.homeImageView.kf.setImage(with: URL(string: upcomingEventsArray[index].home))
     }
 }

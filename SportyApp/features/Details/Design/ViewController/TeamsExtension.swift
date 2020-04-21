@@ -25,8 +25,7 @@ extension DetailsViewController{
     }
     
     func configureTeamsCell(cell : TeamCollectionViewCell , index : Int){
-        
-        cell.teamImageView.frame = CGRect(x: 0, y: 0, width: 296, height: 152)
+                       
         cell.teamImageView.kf.setImage(with: URL(string: teamsArray[index].strTeamBadge))
         cell.teamNameLabel.text = teamsArray[index].strTeam
         

@@ -16,4 +16,10 @@ protocol DetailsPresenterProtocol {
     
     func getLatestEvents(byLeagueId: String,completionHandler:@escaping (_ result:[Event])->Void)
     
+    func insertIntoFavoriteLeagues(league : League) -> Bool
+    
+    func deleteFavoriteLeague(id : String)
+    
+    func isFavoriteLeague(id : String) -> Bool
+    
 }

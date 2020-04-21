@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SportsViewController: UIViewController {
+class SportsViewController: UIViewController , ReachabilityObserverDelegate{
   
     
 //outlets
@@ -23,16 +23,25 @@ class SportsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setupCollectionView()
+         try? addReachabilityObserver()
+        
+      
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//         try? addReachabilityObserver()
+//    }
     
     // MARK:- Collection View
     private func setupCollectionView() {
         collectionView.dataSource = collectionViewProvider
         collectionView.delegate = collectionViewProvider
+        let indicator  = getIndicatorActivity()
+        indicator.startAnimating()
+        self.view.addSubview(indicator)
         presenter.getSports { (firstSectionItems) in
             self.collectionViewProvider.navigation = self.navigationController!
             self.collectionViewProvider.items = firstSectionItems
+            indicator.stopAnimating()
             self.collectionView.reloadData()
         }
         showLayout()
@@ -44,5 +53,31 @@ class SportsViewController: UIViewController {
          collectionView.setContentOffset(CGPoint.zero, animated: false)
          collectionView.reloadData()
      }
-
+    
+    
+    func reachabilityChanged(_ isReachable: Bool) {
+            if !isReachable {
+                print("No internet connection")
+                internetView.isHidden = false
+                sportsView.isHidden = true
+                   try? addReachabilityObserver()
+            }else {
+               print(" internet connection")
+                internetView.isHidden = true
+                sportsView.isHidden = false
+                 setupCollectionView()
+            }
+    }
+    deinit {
+        removeReachabilityObserver()
+    }
+}
+extension UIViewController {
+    func getIndicatorActivity () -> UIActivityIndicatorView {
+        let indicator = UIActivityIndicatorView(style: .large)
+               indicator.color = .darkGray
+               indicator.hidesWhenStopped = true
+               indicator.center = view.center
+        return indicator
+    }
 }

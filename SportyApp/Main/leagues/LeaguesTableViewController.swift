@@ -14,9 +14,14 @@ class LeaguesTableViewController: UITableViewController {
     private let peresnter = LeaguePresenter.getInstance
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Leagues"
       tableView.register(UINib(nibName: "LeagueCell", bundle: nil), forCellReuseIdentifier: "leagueCell")
+        let indicator = getIndicatorActivity()
+        view.addSubview(indicator)
+        indicator.startAnimating()
         peresnter.getLeagues(sportName: sportTitle) { (list) in
             self.leagues = list
+            indicator.stopAnimating()
             self.tableView.reloadData()
         }
       
@@ -39,10 +44,11 @@ class LeaguesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leagueCell", for: indexPath) as! LeagueCell
+        cell.youtubeURL = leagues[indexPath.row].strYoutube
         let url = URL(string: leagues[indexPath.row].strBadge)
        cell.leagueImage.kf.setImage(with: url)
        cell.leagueTitle.text = leagues[indexPath.row].strLeague
-
+        
         return cell
     }
 
@@ -54,6 +60,7 @@ class LeaguesTableViewController: UITableViewController {
         controller.modalPresentationStyle = .popover
         self.present(controller, animated: true, completion: nil)
     }
+   
    
 
 }

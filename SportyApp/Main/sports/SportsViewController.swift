@@ -16,7 +16,13 @@ class SportsViewController: UIViewController , ReachabilityObserverDelegate{
     @IBOutlet weak var sportsView: UIView!
     @IBOutlet weak var internetView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+   
+    //Actions
     
+    @IBAction func retryInternet(_ sender: Any) {
+           try? addReachabilityObserver()
+        
+    }
     private let collectionViewProvider = CollectionViewProvider()
     private let presenter = SportsPresenter.getInstance
     private var cellSizes = [[CGSize]]()
@@ -27,10 +33,7 @@ class SportsViewController: UIViewController , ReachabilityObserverDelegate{
         
       
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//         try? addReachabilityObserver()
-//    }
-    
+
     // MARK:- Collection View
     private func setupCollectionView() {
         collectionView.dataSource = collectionViewProvider
@@ -60,7 +63,7 @@ class SportsViewController: UIViewController , ReachabilityObserverDelegate{
                 print("No internet connection")
                 internetView.isHidden = false
                 sportsView.isHidden = true
-                   try? addReachabilityObserver()
+                 //  try? addReachabilityObserver()
             }else {
                print(" internet connection")
                 internetView.isHidden = true

@@ -85,6 +85,5 @@ class CollectionViewProvider: NSObject,UICollectionViewDataSource , UICollection
 //                   cell.sportTitleLabel.isHidden = false
 //               }
 //    }
-   
 
 }

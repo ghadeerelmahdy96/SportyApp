@@ -18,7 +18,7 @@ class LeaguesHandler : RemoteHandlerProtocol{
                        })
              })
     }
-    func parseResultDic(param: Any,arr : [JSON],completionHandler:@escaping (_ leagues:[League])->Void)
+  private  func parseResultDic(param: Any,arr : [JSON],completionHandler:@escaping (_ leagues:[League])->Void)
       {
 
         var leagueList : [League] = []

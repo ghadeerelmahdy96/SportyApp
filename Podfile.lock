@@ -8,6 +8,7 @@ PODS:
     - collection-view-layouts/Core
   - collection-view-layouts/PinterestLayout (0.1.2):
     - collection-view-layouts/Core
+  - ReachabilitySwift (5.0.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
@@ -15,20 +16,23 @@ DEPENDENCIES:
   - collection-view-layouts/Core
   - collection-view-layouts/FlickrLayout
   - collection-view-layouts/PinterestLayout
+  - ReachabilitySwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Alamofire-SwiftyJSON
     - collection-view-layouts
+    - ReachabilitySwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   collection-view-layouts: f3da16bf3211ecb885bb3e45160c2267edf5b65e
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 378568364c75e5ae0c92aca596d5c21496cab1a5
+PODFILE CHECKSUM: 041c47240bff9317053a430fc9d4fc91bc275909
 
 COCOAPODS: 1.9.1

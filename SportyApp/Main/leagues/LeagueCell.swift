@@ -16,7 +16,19 @@ class LeagueCell: UITableViewCell {
     @IBOutlet weak var leagueTitle: UILabel!
     //action
     @IBAction func youtubeBtn(_ sender: Any) {
+        print(youtubeURL)
+               print("\n")
+         var url = NSURL(string:youtubeURL)! as URL
+        if UIApplication.shared.canOpenURL(url ){
+            UIApplication.shared.open(url, options: [ : ], completionHandler: nil)
+         } else{
+            url = NSURL(string:"https://\(youtubeURL)")! as URL
+                UIApplication.shared.open(url, options: [ : ], completionHandler: nil)
+         }
+       
     }
+    //var
+    var youtubeURL : String = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

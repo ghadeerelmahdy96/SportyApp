@@ -56,6 +56,7 @@
 		E3F55460244DF8750046675C /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F5545E244DF8750046675C /* LeagueCell.swift */; };
 		E3F55461244DF8750046675C /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3F5545F244DF8750046675C /* LeagueCell.xib */; };
 		E3F55463244E056F0046675C /* LeaguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55462244E056F0046675C /* LeaguePresenter.swift */; };
+		E3F55465244E55120046675C /* ReachabilityObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55464244E55120046675C /* ReachabilityObserverDelegate.swift */; };
 		E47D635825B62A74BD6AD911 /* Pods_SportyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		E3F5545E244DF8750046675C /* LeagueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		E3F5545F244DF8750046675C /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
 		E3F55462244E056F0046675C /* LeaguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguePresenter.swift; sourceTree = "<group>"; };
+		E3F55464244E55120046675C /* ReachabilityObserverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityObserverDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +341,7 @@
 		E3B1ACBF244A2D7B00C144E6 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				E3F55464244E55120046675C /* ReachabilityObserverDelegate.swift */,
 				E3F55445244B8B450046675C /* Constants.swift */,
 			);
 			path = services;
@@ -550,6 +553,7 @@
 				E3F55456244CD9FC0046675C /* CollectionViewProvider.swift in Sources */,
 				08A4781C244B7B2A00434B21 /* League.swift in Sources */,
 				08A4785B244CDEAB00434B21 /* LatestCollectionViewCell.swift in Sources */,
+				E3F55465244E55120046675C /* ReachabilityObserverDelegate.swift in Sources */,
 				08A47816244B7AC900434B21 /* LeaguesHandler.swift in Sources */,
 				08A47842244CA33B00434B21 /* DetailsViewController.swift in Sources */,
 				E3F55460244DF8750046675C /* LeagueCell.swift in Sources */,

@@ -22,5 +22,5 @@ struct Team{
     var strTeamShort: String
     var strTeamBadge:String
     var strTeam : String
-    
+    var strDescriptionEN : String
 }

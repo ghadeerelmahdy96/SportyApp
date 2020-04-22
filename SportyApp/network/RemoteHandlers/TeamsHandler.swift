@@ -40,7 +40,8 @@ class TeamsHandler : RemoteHandlerProtocol {
             let strTeamShort = team["strTeamShort"].stringValue
             let strTeamBadge = team["strTeamBadge"].stringValue
             let strTeam = team["strTeam"].stringValue
-            teamsArray.append(Team(idTeam: idTeam, intFormedYear: intFormedYear, strKeywords: strKeywords, strYoutube: strYoutube, strStadium: strStaduim, strStadiumLocation: strStadiumLocation, strStadiumThumb: strStadiumThumb, intStadiumCapacity: intStadiumCapacity, strTeamLogo: strTeamLogo, strTeamShort: strTeamShort, strTeamBadge: strTeamBadge,strTeam: strTeam))
+            let strDescriptionEn = team["strDescriptionEN"].stringValue            
+            teamsArray.append(Team(idTeam: idTeam, intFormedYear: intFormedYear, strKeywords: strKeywords, strYoutube: strYoutube, strStadium: strStaduim, strStadiumLocation: strStadiumLocation, strStadiumThumb: strStadiumThumb, intStadiumCapacity: intStadiumCapacity, strTeamLogo: strTeamLogo, strTeamShort: strTeamShort, strTeamBadge: strTeamBadge,strTeam: strTeam,strDescriptionEN : strDescriptionEn))
         
             }
         }

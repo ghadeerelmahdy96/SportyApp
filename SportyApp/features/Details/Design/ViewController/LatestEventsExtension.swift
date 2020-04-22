@@ -15,10 +15,8 @@ extension DetailsViewController{
           
       let closure = { (latestEventsArrayNew :[Event]) -> Void in
           DispatchQueue.main.async {
-              self.latestEventsArray = latestEventsArrayNew
-              self.latestCollectionView.reloadData()
-              self.activityIndicator.stopAnimating()
-              self.latestCollectionView.isUserInteractionEnabled = true
+            self.latestEventsArray = latestEventsArrayNew
+            self.count+=1
           }
       }
       detailsPresenter.getLatestEvents(byLeagueId: leagueId, completionHandler: closure)

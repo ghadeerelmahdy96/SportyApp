@@ -21,6 +21,7 @@ class TeamsTableViewController: UITableViewController {
     
     @IBOutlet weak var stadiumCapacityLabel: UILabel!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     //Variables
     var teamFromLeagueDetails : Team?
     
@@ -33,15 +34,10 @@ class TeamsTableViewController: UITableViewController {
         teamLogoImageView.kf.setImage(with: URL(string: teamFromLeagueDetails?.strTeamBadge ?? ""),placeholder: UIImage(named: ""))
         stadiumImageView.kf.setImage(with: URL(string: teamFromLeagueDetails?.strStadiumThumb ?? ""),placeholder: UIImage(named: ""))
                 
-        if teamFromLeagueDetails?.strKeywords != "" || teamFromLeagueDetails?.strTeamShort  !=  "null"{
-            teamNameLabel.text = (teamFromLeagueDetails?.strTeam ?? "") + "("
-            teamNameLabel.text! += (teamFromLeagueDetails?.strTeamShort ?? "" )+")"
-            
-        }else{
-            teamNameLabel.text = teamFromLeagueDetails?.strTeam ?? ""
-        }
+        teamNameLabel.text = teamFromLeagueDetails?.strTeam ?? ""
         
-        teamCreationYearLabel.text = String(teamFromLeagueDetails?.intFormedYear ?? 0)
+        
+        teamCreationYearLabel.text = "Established in :" + String(teamFromLeagueDetails?.intFormedYear ?? 0)
        
         if teamFromLeagueDetails?.strStadium != "" || teamFromLeagueDetails?.strStadium != "null"{
             stadiumNameLabel.text! += teamFromLeagueDetails?.strStadium ?? ""
@@ -54,6 +50,7 @@ class TeamsTableViewController: UITableViewController {
             stadiumCapacityLabel.text = ""
             stadiumLocationLabel.text = ""
         }
+        descriptionLabel.text = teamFromLeagueDetails?.strDescriptionEN ?? ""
     }
 
     // MARK: - Table view data source
@@ -65,7 +62,7 @@ class TeamsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 4
     }
 
     /*

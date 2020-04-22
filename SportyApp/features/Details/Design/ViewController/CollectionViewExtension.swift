@@ -75,5 +75,19 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
         }
     }
     
+    internal func reloadAllCollectionViews(){
+        
+        self.activityIndicator.stopAnimating()
+        
+        self.upcomingCollectionView.isUserInteractionEnabled = true
+        self.latestCollectionView.isUserInteractionEnabled = true
+        self.teamsCollectionView.isUserInteractionEnabled = true
+        
+        self.upcomingCollectionView.reloadData()
+        self.latestCollectionView.reloadData()
+        self.teamsCollectionView.reloadData()
+        
+    }
+    
     
 }

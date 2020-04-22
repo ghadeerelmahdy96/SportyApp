@@ -15,10 +15,9 @@ extension DetailsViewController{
     func getTeams(leagueName : String){
        let closure = { (teamsArrayNew:[Team]) -> Void in
            DispatchQueue.main.async {
-               self.teamsArray = teamsArrayNew
-               self.teamsCollectionView.reloadData()
-               self.activityIndicator.stopAnimating()
-               self.teamsCollectionView.isUserInteractionEnabled = true
+                self.teamsArray = teamsArrayNew
+                self.isTeamDataLoaded = true
+                self.count += 1
            }
        }
        detailsPresenter.getTeams(leagueName: leagueName, completionHandler: closure)

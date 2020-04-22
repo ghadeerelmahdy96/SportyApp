@@ -27,7 +27,18 @@ class DetailsViewController: UIViewController{
     var teamsArray = [Team]()
     var leagueFromMain : League?
     var emptyStarImage = UIImage(named: "EmptyStar.png")
-    var filledStarImage = UIImage(named: "FilledStar.png")    
+    var filledStarImage = UIImage(named: "FilledStar.png")
+    var isTeamDataLoaded = false
+    var count2 = 0
+    var count: Int  {
+        get {return 1}
+        set{
+            if(count2 == 2){
+                self.reloadAllCollectionViews()
+            }
+            count2 += 1
+        }
+    }
     
     //Functions
         

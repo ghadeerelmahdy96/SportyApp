@@ -17,7 +17,9 @@ extension DetailsViewController{
        let closure = { (upComingEventsArrayNew :[Event]) -> Void in
            DispatchQueue.main.async {
             self.upcomingEventsArray = upComingEventsArrayNew               
-            self.count+=1
+              self.upcomingCollectionView.isUserInteractionEnabled = true
+                 self.upcomingCollectionView.reloadData()
+                 self.activityIndicator.stopAnimating()
            }
        }
        detailsPresenter.getUpcomingEvents(byLeagueId: leagueId, completionHandler: closure)
@@ -25,23 +27,32 @@ extension DetailsViewController{
     }
     
     func configureUpComingEventsCell(cell : UpcomingCollectionViewCell , index : Int) {
-        cell.awayTeamLabel.text = upcomingEventsArray[index].strAwayTeam
-        cell.homeTeamLabel.text = upcomingEventsArray[index].strHomeTeam
-        cell.dateLabel.text = upcomingEventsArray[index].strDate
-        cell.timeLabel.text = upcomingEventsArray[index].strTime
-        if isTeamDataLoaded{
+        if upcomingEventsArray[index].strAwayTeam != "null" && upcomingEventsArray[index].strAwayTeam != "" &&
+             upcomingEventsArray[index].strHomeTeam != "null" && upcomingEventsArray[index].strHomeTeam != ""{
             
-            let hometeamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strHomeTeam})
-            upcomingEventsArray[index].strHomeTeamLogo = hometeamsList[0].strTeamBadge
+             cell.awayTeamLabel.text = upcomingEventsArray[index].strAwayTeam
+             cell.homeTeamLabel.text = upcomingEventsArray[index].strHomeTeam
+             cell.dateLabel.text = upcomingEventsArray[index].strDate
+             cell.timeLabel.text = upcomingEventsArray[index].strTime
+             if isTeamDataLoaded{
+                 
+                 let hometeamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strHomeTeam})
+                 upcomingEventsArray[index].strHomeTeamLogo = hometeamsList[0].strTeamBadge
+                 
+                 cell.homeImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
+                 
+                 let awayteamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strAwayTeam})
+                
+                upcomingEventsArray[index].strAwayTeamLogo = awayteamsList[0].strTeamBadge
+                cell.awayImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
+             }
+             
+             cell.vsLabel.text = "VS"
             
-            cell.homeImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
-            
-            let awayteamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strAwayTeam})
-           
-           upcomingEventsArray[index].strAwayTeamLogo = awayteamsList[0].strTeamBadge
-           cell.awayImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
+        }else{
+            cell.isHidden = true
         }
+     
         
-        cell.vsLabel.text = "VS"
     }
 }

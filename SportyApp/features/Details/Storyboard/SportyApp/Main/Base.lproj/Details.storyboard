@@ -232,7 +232,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqz-zg-sgo">
-                                                <rect key="frame" x="0.0" y="8" width="282.66666666666669" height="38.333333333333336"/>
+                                                <rect key="frame" x="8" y="8" width="274.66666666666669" height="38.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -241,7 +241,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="8oP-i7-Lve" secondAttribute="trailing" id="0iU-wC-A0B"/>
                                             <constraint firstAttribute="bottom" secondItem="8oP-i7-Lve" secondAttribute="bottom" id="DBC-4l-ghV"/>
-                                            <constraint firstItem="pqz-zg-sgo" firstAttribute="leading" secondItem="4qQ-Cq-ofc" secondAttribute="leading" id="Etb-zf-ucA"/>
+                                            <constraint firstItem="pqz-zg-sgo" firstAttribute="leading" secondItem="4qQ-Cq-ofc" secondAttribute="leading" constant="8" id="Etb-zf-ucA"/>
                                             <constraint firstItem="8oP-i7-Lve" firstAttribute="width" secondItem="4qQ-Cq-ofc" secondAttribute="width" multiplier="0.25" id="U1k-Pj-T95"/>
                                             <constraint firstItem="pqz-zg-sgo" firstAttribute="centerY" secondItem="4qQ-Cq-ofc" secondAttribute="centerY" id="a5V-Q4-hoQ"/>
                                             <constraint firstItem="pqz-zg-sgo" firstAttribute="centerY" secondItem="4qQ-Cq-ofc" secondAttribute="centerY" id="dCd-4h-tqM"/>
@@ -274,7 +274,7 @@
                                         </cells>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-23-PKE">
-                                        <rect key="frame" x="0.0" y="344" width="414" height="212"/>
+                                        <rect key="frame" x="0.0" y="346" width="414" height="212"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="212" id="ooE-aM-GZc"/>
@@ -302,17 +302,17 @@
                                 <constraints>
                                     <constraint firstItem="X2d-a7-8Wf" firstAttribute="top" secondItem="tto-lT-EGO" secondAttribute="bottom" constant="8" id="3C1-Sy-Ly7"/>
                                     <constraint firstItem="tto-lT-EGO" firstAttribute="leading" secondItem="RB1-QX-Br2" secondAttribute="leading" id="3eS-DD-XnA"/>
-                                    <constraint firstItem="QgJ-23-PKE" firstAttribute="top" secondItem="hhK-Y8-zJs" secondAttribute="top" constant="344" id="60v-kh-ssO"/>
+                                    <constraint firstItem="QgJ-23-PKE" firstAttribute="top" secondItem="hhK-Y8-zJs" secondAttribute="top" constant="346" id="60v-kh-ssO"/>
                                     <constraint firstItem="RB1-QX-Br2" firstAttribute="top" secondItem="Njd-YZ-5hf" secondAttribute="bottom" constant="8" id="DAN-Ad-Ggz"/>
                                     <constraint firstItem="Njd-YZ-5hf" firstAttribute="top" secondItem="4qQ-Cq-ofc" secondAttribute="bottom" constant="16" id="Kpt-XW-dN6"/>
                                     <constraint firstAttribute="trailing" secondItem="RB1-QX-Br2" secondAttribute="trailing" constant="16" id="L7x-bP-7aX"/>
                                     <constraint firstItem="4qQ-Cq-ofc" firstAttribute="trailing" secondItem="hhK-Y8-zJs" secondAttribute="trailingMargin" id="OO8-vH-IIg"/>
-                                    <constraint firstItem="tto-lT-EGO" firstAttribute="top" secondItem="QgJ-23-PKE" secondAttribute="bottom" constant="8" id="QSn-fa-URc"/>
+                                    <constraint firstItem="tto-lT-EGO" firstAttribute="top" secondItem="QgJ-23-PKE" secondAttribute="bottom" constant="6" id="QSn-fa-URc"/>
                                     <constraint firstItem="4qQ-Cq-ofc" firstAttribute="top" secondItem="hhK-Y8-zJs" secondAttribute="top" constant="24" id="StZ-FO-nlh"/>
                                     <constraint firstAttribute="trailing" secondItem="QgJ-23-PKE" secondAttribute="trailing" id="UfK-CV-vSH"/>
-                                    <constraint firstItem="QgJ-23-PKE" firstAttribute="top" secondItem="RB1-QX-Br2" secondAttribute="bottom" constant="8" id="Xhk-Gh-ZCJ"/>
+                                    <constraint firstItem="QgJ-23-PKE" firstAttribute="top" secondItem="RB1-QX-Br2" secondAttribute="bottom" constant="10" id="Xhk-Gh-ZCJ"/>
                                     <constraint firstItem="Njd-YZ-5hf" firstAttribute="trailing" secondItem="QgJ-23-PKE" secondAttribute="trailing" id="aTD-cW-GiA"/>
-                                    <constraint firstItem="tto-lT-EGO" firstAttribute="top" secondItem="QgJ-23-PKE" secondAttribute="bottom" constant="8" id="dAK-Cw-jNr"/>
+                                    <constraint firstItem="tto-lT-EGO" firstAttribute="top" secondItem="QgJ-23-PKE" secondAttribute="bottom" constant="6" id="dAK-Cw-jNr"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tto-lT-EGO" secondAttribute="trailing" constant="20" symbolic="YES" id="eBO-9O-5cC"/>
                                     <constraint firstItem="RB1-QX-Br2" firstAttribute="leading" secondItem="hhK-Y8-zJs" secondAttribute="leading" constant="16" id="h2d-I1-TNH"/>
                                     <constraint firstItem="X2d-a7-8Wf" firstAttribute="leading" secondItem="hhK-Y8-zJs" secondAttribute="leading" id="jBj-di-gFF"/>

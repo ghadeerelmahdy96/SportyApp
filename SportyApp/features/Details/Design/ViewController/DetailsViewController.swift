@@ -29,16 +29,8 @@ class DetailsViewController: UIViewController{
     var emptyStarImage = UIImage(named: "EmptyStar.png")
     var filledStarImage = UIImage(named: "FilledStar.png")
     var isTeamDataLoaded = false
-    var count2 = 0
-    var count: Int  {
-        get {return 1}
-        set{
-            if(count2 == 2){
-                self.reloadAllCollectionViews()
-            }
-            count2 += 1
-        }
-    }
+    var upcomingEventsHiddenCellsCount = 0
+    var latestEventsHiddenCellsCount = 0
     
     //Functions
         
@@ -55,8 +47,7 @@ class DetailsViewController: UIViewController{
         getTeams(leagueName: leagueFromMain?.strLeague ?? "")
         getUpComingEvents(leagueId : leagueFromMain?.idLeague ?? "")
         getLatestEvents(leagueId: leagueFromMain?.idLeague ?? "")
-        
-        print(upcomingEventsArray)
+              
                 
     }
     
@@ -65,7 +56,7 @@ class DetailsViewController: UIViewController{
         activityIndicator.center = self.view.center
         activityIndicator.style = UIActivityIndicatorView.Style.medium
         activityIndicator.hidesWhenStopped = true
-        let transform: CGAffineTransform = CGAffineTransform(scaleX: 8, y: 8)
+        let transform: CGAffineTransform = CGAffineTransform(scaleX: 1, y: 1)
         activityIndicator.transform = transform
         
         activityIndicator.startAnimating()

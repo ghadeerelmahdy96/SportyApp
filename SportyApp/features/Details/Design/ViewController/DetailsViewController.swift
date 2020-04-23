@@ -26,6 +26,7 @@ class DetailsViewController: UIViewController{
     var latestEventsArray = [Event]()
     var teamsArray = [Team]()
     var leagueFromMain : League?
+    var favouritesController : ReloadTableViewDelegate?
     var emptyStarImage = UIImage(named: "EmptyStar.png")
     var filledStarImage = UIImage(named: "FilledStar.png")
     var isTeamDataLoaded = false
@@ -102,12 +103,14 @@ class DetailsViewController: UIViewController{
         if favoriteButton.currentImage == filledStarImage{
             detailsPresenter.deleteFavoriteLeague(id: leagueFromMain?.idLeague ?? "")
             favoriteButton.setImage(emptyStarImage, for: .normal)
-            
+            favouritesController?.reloadYourTableView()
           }else{
             let result = detailsPresenter.insertIntoFavoriteLeagues(league: leagueFromMain!)
             if result{
                 favoriteButton.setImage(filledStarImage, for: .normal)
-                print(CoreDataHandler.getCoreHandlerInstance().getFavouriteLeagues())
+               favouritesController?.reloadYourTableView()
+                print(CoreDataHandler.getCoreHandlerInstance(
+               ).getFavouriteLeagues())
 
             }else{
                 print("error in adding to favorites")

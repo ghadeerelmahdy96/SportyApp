@@ -56,7 +56,7 @@ class CollectionViewProvider: NSObject,UICollectionViewDataSource , UICollection
     let cell = collectionView.cellForItem(at: indexPath)
     if (cell as? ContentCollectionViewCell) != nil {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(identifier: "leagueView") as! LeaguesTableViewController
+            let controller = storyboard.instantiateViewController(identifier: "leagueView") as! LeaguesViewController
             controller.sportTitle = items[indexPath.row].strSport
         controller.modalPresentationStyle = .fullScreen
         navigation.pushViewController(controller, animated: true)

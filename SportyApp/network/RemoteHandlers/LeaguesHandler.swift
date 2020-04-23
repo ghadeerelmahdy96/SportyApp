@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 class LeaguesHandler : RemoteHandlerProtocol{
     func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
-             requestJson(url: "\(BASE_URL)all_leagues.php",key: "leagues",completionHandler: { (arr) in
+             requestJson(url: LEAGUES_URL ,key: "leagues",completionHandler: { (arr) in
                 self.parseResultDic(param : param,arr : arr, completionHandler: { (leagueList) in
                           completionHandler(leagueList)
                        })
@@ -27,7 +27,7 @@ class LeaguesHandler : RemoteHandlerProtocol{
             let strSport = dic["strSport"] as! String
             if(strSport == param as! String ){
                 let idleague = dic["idLeague"] as? String
-                requestJson(url: "\(BASE_URL)lookupleague.php?id=\(Int.init(idleague!) ?? -1)",key: "leagues",completionHandler: { (arr) in
+                requestJson(url: "\(LOOKUPLEAGUE_URL)\(Int.init(idleague!) ?? -1)",key: "leagues",completionHandler: { (arr) in
                       let dic = arr[0].dictionaryObject!
                       let strLeague = dic["strLeague"] as? String
                       let strSport = dic["strSport"] as? String

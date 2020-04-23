@@ -24,6 +24,8 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        homeImageView.layer.cornerRadius = homeImageView.frame.size.width / 2
+        awayImageView.layer.cornerRadius = awayImageView.frame.size.width / 2
     }
 
 }

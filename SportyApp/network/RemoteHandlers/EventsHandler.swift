@@ -16,16 +16,14 @@ class EventsHandler : RemoteHandlerProtocol{
         let idLeague : Int = search["idLeague"]!
         requestJson(url: "\(BASE_URL)events\(eventStatus)league.php?id=\(idLeague)", key: "events",completionHandler:  { (arr) in
 
-           self.parseResultDic(arr: arr, completionHandler: { (list) in
-           // print("event \(list) \n count \(list.count)")
-                completionHandler(list)
+          let list =  self.parseResultDic(arr: arr)
+            completionHandler(list)
+           
             })
-          })
         }
-   private func parseResultDic(arr : [JSON],completionHandler:@escaping (_ leagues:[Event])->Void) {
+   private func parseResultDic(arr : [JSON] ) -> [Event] {
     var eventList : [Event] = []
-    var strHomeTeamLogo = ""
-    var strAwayTeamLogo = ""
+  
     for json in arr {
         let dic = json.dictionaryObject!
             let idEvent = dic["idEvent"] as? String
@@ -38,20 +36,20 @@ class EventsHandler : RemoteHandlerProtocol{
             let idAwayTeam = dic["idAwayTeam"] as? String
             let strDate = dic["dateEvent"] as? String
           let strTime = dic["strTime"] as? String
-      requestJson(url: "\(BASE_URL)lookupteam.php?id=\(Int.init(idHomeTeam!) ?? -1)",key: "teams",completionHandler: { (arr) in
-             let dicHome = arr[0].dictionaryObject!
-        strHomeTeamLogo = dicHome["strTeamLogo"] as? String ?? "null"
-        self.requestJson(url: "\(BASE_URL)lookupteam.php?id=\(Int.init(idAwayTeam!) ?? -1)",key: "teams",completionHandler: { (arr) in
-                    let dicAway = arr[0].dictionaryObject!
-        strAwayTeamLogo = dicAway["strTeamLogo"] as? String ?? "null"
-          eventList.append(Event(idEvent: idEvent ?? "null", strEvent: strEvent ?? "null", strHomeTeam: strHomeTeam ?? "null", strAwayTeam: strAwayTeam ?? "null", intHomeScore: intHomeScore  ?? "null", intAwayScore: intAwayScore ?? "null", idHomeTeam: idHomeTeam ?? "null", idAwayTeam: idAwayTeam ?? "null", strDate: strDate ?? "null", strTime: strTime ?? "null",strHomeTeamLogo: strHomeTeamLogo , strAwayTeamLogo: strAwayTeamLogo))
-        completionHandler(eventList)
-      })
-    
-    })
+     
+          eventList.append(Event(idEvent: idEvent ?? "null", strEvent: strEvent ?? "null", strHomeTeam: strHomeTeam ?? "null", strAwayTeam: strAwayTeam ?? "null", intHomeScore: intHomeScore  ?? "null", intAwayScore: intAwayScore ?? "null", idHomeTeam: idHomeTeam ?? "null", idAwayTeam: idAwayTeam ?? "null", strDate: strDate ?? "null", strTime: strTime ?? "null",strHomeTeamLogo: "" , strAwayTeamLogo: ""))
+   
+      }
+        return eventList
     }
-     }
-  
+    
+     
+    func test(){
+        
+        
+        
+    
+    }
 }
 //    func fetchData(param:Any , completionHandler:@escaping (_ result:[Any])->Void){
 //        let search = param as! Dictionary<String, Int>

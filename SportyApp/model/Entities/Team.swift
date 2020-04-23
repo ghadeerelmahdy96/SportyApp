@@ -14,7 +14,7 @@ struct Team{
     var intFormedYear:Int
     var strKeywords : String
     var strYoutube : String
-    var strStaduim : String
+    var strStadium : String
     var strStadiumLocation:String
     var strStadiumThumb: String
     var intStadiumCapacity: Int
@@ -22,5 +22,5 @@ struct Team{
     var strTeamShort: String
     var strTeamBadge:String
     var strTeam : String
-    
+    var strDescriptionEN : String
 }

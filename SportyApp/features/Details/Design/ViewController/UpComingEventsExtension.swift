@@ -59,6 +59,8 @@ extension DetailsViewController{
             cell.isHidden = true
         }
      
+        cell.layer.cornerRadius = 15
+        cell.layer.borderWidth = 1
         
     }
 }

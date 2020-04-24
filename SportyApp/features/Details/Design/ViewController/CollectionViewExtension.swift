@@ -76,5 +76,11 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
            
         }
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == upcomingCollectionView{
+            return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+        }
+        return UIEdgeInsets()
+    }
     
 }

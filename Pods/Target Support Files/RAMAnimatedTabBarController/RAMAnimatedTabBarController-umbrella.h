@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double collection_view_layoutsVersionNumber;
-FOUNDATION_EXPORT const unsigned char collection_view_layoutsVersionString[];
+FOUNDATION_EXPORT double RAMAnimatedTabBarControllerVersionNumber;
+FOUNDATION_EXPORT const unsigned char RAMAnimatedTabBarControllerVersionString[];
 

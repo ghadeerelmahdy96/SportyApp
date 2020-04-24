@@ -21,7 +21,7 @@
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-OB-fGL">
-                        <rect key="frame" x="8" y="120" width="176" height="21"/>
+                        <rect key="frame" x="8" y="116" width="176" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -30,12 +30,12 @@
             </view>
             <constraints>
                 <constraint firstItem="UzC-un-YyZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="46" id="P8R-Uh-hKQ"/>
-                <constraint firstItem="zpm-OB-fGL" firstAttribute="top" secondItem="UzC-un-YyZ" secondAttribute="bottom" constant="12" id="S8J-Py-Iu4"/>
+                <constraint firstItem="zpm-OB-fGL" firstAttribute="top" secondItem="UzC-un-YyZ" secondAttribute="bottom" constant="8" id="S8J-Py-Iu4"/>
                 <constraint firstItem="zpm-OB-fGL" firstAttribute="centerX" secondItem="UzC-un-YyZ" secondAttribute="centerX" id="Scr-bU-gyw"/>
                 <constraint firstItem="zpm-OB-fGL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="X8d-Wh-TA6"/>
                 <constraint firstAttribute="trailing" secondItem="UzC-un-YyZ" secondAttribute="trailing" constant="46" id="Zkv-Xh-Cmj"/>
                 <constraint firstItem="UzC-un-YyZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="j6o-ed-oVc"/>
-                <constraint firstAttribute="bottom" secondItem="zpm-OB-fGL" secondAttribute="bottom" constant="11" id="xa1-zx-qco"/>
+                <constraint firstAttribute="bottom" secondItem="zpm-OB-fGL" secondAttribute="bottom" constant="15" id="xa1-zx-qco"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="191" height="152"/>

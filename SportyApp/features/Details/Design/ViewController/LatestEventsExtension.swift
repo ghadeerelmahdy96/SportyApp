@@ -49,14 +49,17 @@ extension DetailsViewController{
             }
             if isTeamDataLoaded{
                 let hometeamsList = teamsArray.filter({(value) in value.strTeam ==  latestEventsArray[index].strHomeTeam})
-                 latestEventsArray[index].strHomeTeamLogo = hometeamsList[0].strTeamBadge
-                 
-                 cell.homeTeamImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
-                 
+                if hometeamsList.count>0{
+                    latestEventsArray[index].strHomeTeamLogo = hometeamsList[0].strTeamBadge
+                    cell.homeTeamImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge))
+                }
+               
                  let awayteamsList = teamsArray.filter({(value) in value.strTeam ==  latestEventsArray[index].strAwayTeam})
-                
-                latestEventsArray[index].strAwayTeamLogo = awayteamsList[0].strTeamBadge
-                cell.awayTeamImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
+                if awayteamsList.count>0{
+                    latestEventsArray[index].strAwayTeamLogo = awayteamsList[0].strTeamBadge
+                    cell.awayTeamImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge))
+                }
+               
             }
         }else{
             cell.isHidden = true            

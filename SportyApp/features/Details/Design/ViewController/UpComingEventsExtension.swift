@@ -36,15 +36,21 @@ extension DetailsViewController{
              cell.timeLabel.text = upcomingEventsArray[index].strTime
              if isTeamDataLoaded{
                  
-                 let hometeamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strHomeTeam})
-                 upcomingEventsArray[index].strHomeTeamLogo = hometeamsList[0].strTeamBadge
-                 
-                 cell.homeImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
-                 
-                 let awayteamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strAwayTeam})
+                let hometeamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strHomeTeam})
+                if hometeamsList.count>0{
+                    upcomingEventsArray[index].strHomeTeamLogo = hometeamsList[0].strTeamBadge
+                                   
+                    cell.homeImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge))
+                }
+               
                 
-                upcomingEventsArray[index].strAwayTeamLogo = awayteamsList[0].strTeamBadge
-                cell.awayImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge),placeholder: UIImage(named: ""))
+                 
+                let awayteamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strAwayTeam})
+                if awayteamsList.count>0 {
+                    upcomingEventsArray[index].strAwayTeamLogo = awayteamsList[0].strTeamBadge
+                    cell.awayImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge))
+                }
+                
              }
              
              cell.vsLabel.text = "VS"

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LeagueTableView.tableView(_:didSelectRowAt:):LeagueTableView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "leagues">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

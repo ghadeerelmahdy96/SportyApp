@@ -58,7 +58,6 @@ class LeaguesViewController: UIViewController , ReachabilityObserverDelegate {
                    print("No internet connection")
                    internetView.isHidden = false
                    leaguesView.isHidden = true
-                    //  try? addReachabilityObserver()
                }else {
                   print(" internet connection")
                    internetView.isHidden = true

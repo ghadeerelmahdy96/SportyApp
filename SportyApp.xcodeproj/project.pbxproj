@@ -298,6 +298,14 @@
 			path = favourites;
 			sourceTree = "<group>";
 		};
+		E33B75552453682B00231435 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				E3B1ACAA244A2C6600C144E6 /* Main.storyboard */,
+			);
+			path = "Main View";
+			sourceTree = "<group>";
+		};
 		E3B1AC98244A2C6500C144E6 = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +334,7 @@
 				E3B1ACBD244A2C9D00C144E6 /* network */,
 				E3B1ACBC244A2C9500C144E6 /* model */,
 				E3B1ACB2244A2C6A00C144E6 /* LaunchScreen.storyboard */,
+				E3B1ACA8244A2C6600C144E6 /* ViewController.swift */,
 				E3B1ACB5244A2C6A00C144E6 /* Info.plist */,
 			);
 			path = SportyApp;
@@ -354,11 +363,10 @@
 		E3B1ACBE244A2CB100C144E6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E33B75552453682B00231435 /* Main View */,
 				E30A01EB24520A2C00F24073 /* favourites */,
 				E3F5545B244DF7EF0046675C /* leagues */,
 				E3F5544B244CD4A90046675C /* sports */,
-				E3B1ACAA244A2C6600C144E6 /* Main.storyboard */,
-				E3B1ACA8244A2C6600C144E6 /* ViewController.swift */,
 			);
 			name = Main;
 			path = ../Main;

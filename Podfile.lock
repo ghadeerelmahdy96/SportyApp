@@ -3,36 +3,30 @@ PODS:
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
     - SwiftyJSON (~> 4.0.0)
-  - collection-view-layouts/Core (0.1.2)
-  - collection-view-layouts/FlickrLayout (0.1.2):
-    - collection-view-layouts/Core
-  - collection-view-layouts/PinterestLayout (0.1.2):
-    - collection-view-layouts/Core
+  - RAMAnimatedTabBarController (5.1.0)
   - ReachabilitySwift (5.0.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire-SwiftyJSON
-  - collection-view-layouts/Core
-  - collection-view-layouts/FlickrLayout
-  - collection-view-layouts/PinterestLayout
+  - RAMAnimatedTabBarController
   - ReachabilitySwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Alamofire-SwiftyJSON
-    - collection-view-layouts
+    - RAMAnimatedTabBarController
     - ReachabilitySwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
-  collection-view-layouts: f3da16bf3211ecb885bb3e45160c2267edf5b65e
+  RAMAnimatedTabBarController: b5c821298071fded801532216ad8a24394f89859
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 8ce855ad00cddb901abf8286c7cf8e59cac8ea7b
+PODFILE CHECKSUM: 62499c741902bba22759326117ee16eb8af6d2af
 
 COCOAPODS: 1.9.1

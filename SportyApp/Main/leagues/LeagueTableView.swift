@@ -33,10 +33,10 @@ class LeagueTableView: UITableView , UITableViewDelegate , UITableViewDataSource
          let cell = tableView.dequeueReusableCell(withIdentifier: "leagueCell", for: indexPath) as! LeagueCell
         cell.myLeague = leagues[indexPath.section]
         
-//        cell.layer.borderWidth = 1
-//        cell.layer.cornerRadius = 8
-//        cell.clipsToBounds = true
-//        cell.backgroundColor = UIColor.lightGray
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
+        cell.layer.borderColor = CGColor(srgbRed: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         
          return cell
      }
@@ -47,8 +47,9 @@ class LeagueTableView: UITableView , UITableViewDelegate , UITableViewDataSource
                  let controller = storyboard.instantiateViewController(identifier: "detailsView") as! DetailsViewController
          controller.leagueFromMain = leagues[indexPath.row]
          controller.favouritesController = FavouritesController
-         controller.modalPresentationStyle = .popover
+        controller.modalPresentationStyle = .popover
         ParentController?.present(controller: controller)
+         
      }
     
     

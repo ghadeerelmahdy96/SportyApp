@@ -70,7 +70,7 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
             let storyboard = UIStoryboard(name: "Details", bundle: nil)
             let controller = storyboard.instantiateViewController(identifier: "teamDetailsView") as! TeamsTableViewController
             controller.teamFromLeagueDetails = teamsArray[indexPath.row]
-            controller.modalPresentationStyle = .popover
+            controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
            
         }

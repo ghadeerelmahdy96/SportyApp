@@ -120,5 +120,8 @@ class DetailsViewController: UIViewController{
             }
         }
     }
-      
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

@@ -47,7 +47,7 @@ class LeagueTableView: UITableView , UITableViewDelegate , UITableViewDataSource
                  let controller = storyboard.instantiateViewController(identifier: "detailsView") as! DetailsViewController
          controller.leagueFromMain = leagues[indexPath.section]
          controller.favouritesController = FavouritesController
-        controller.modalPresentationStyle = .popover
+        controller.modalPresentationStyle = .fullScreen
         ParentController?.present(controller: controller)
          
      }

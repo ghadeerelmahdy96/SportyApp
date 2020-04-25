@@ -102,8 +102,11 @@
                             <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmS-Ke-Agf" userLabel="InternetOffline View">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in" translatesAutoresizingMaskIntoConstraints="NO" id="CaV-hi-laC">
+                                        <rect key="frame" x="7" y="212.5" width="400" height="300"/>
+                                    </imageView>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-fP-e3u">
-                                        <rect key="frame" x="158" y="487" width="98" height="36"/>
+                                        <rect key="frame" x="158" y="462.5" width="98" height="36"/>
                                         <color key="backgroundColor" red="0.96854287390000005" green="0.96868163350000003" blue="0.96851247549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Retry again">
@@ -113,16 +116,13 @@
                                             <action selector="retryInternet:" destination="pdo-U3-bN5" eventType="touchUpInside" id="kBH-no-QIw"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="in" translatesAutoresizingMaskIntoConstraints="NO" id="CaV-hi-laC">
-                                        <rect key="frame" x="9" y="155" width="397" height="415"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96854287390000005" green="0.96868163350000003" blue="0.96851247549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="oZo-fP-e3u" firstAttribute="centerX" secondItem="kmS-Ke-Agf" secondAttribute="centerX" id="3uG-mm-nYf"/>
-                                    <constraint firstAttribute="bottom" secondItem="oZo-fP-e3u" secondAttribute="bottom" constant="202" id="nfA-sT-dpm"/>
-                                    <constraint firstAttribute="trailing" secondItem="oZo-fP-e3u" secondAttribute="trailing" constant="158" id="sNd-sX-ebg"/>
+                                    <constraint firstItem="oZo-fP-e3u" firstAttribute="top" secondItem="CaV-hi-laC" secondAttribute="bottom" constant="-50" id="Fkd-a0-2Vr"/>
+                                    <constraint firstItem="CaV-hi-laC" firstAttribute="centerY" secondItem="kmS-Ke-Agf" secondAttribute="centerY" id="LD1-QX-jFm"/>
+                                    <constraint firstItem="oZo-fP-e3u" firstAttribute="centerX" secondItem="kmS-Ke-Agf" secondAttribute="centerX" id="Sep-f6-Pwn"/>
+                                    <constraint firstItem="CaV-hi-laC" firstAttribute="centerX" secondItem="kmS-Ke-Agf" secondAttribute="centerX" id="qO4-p8-mhC"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -183,17 +183,14 @@
                                     <constraint firstAttribute="trailing" secondItem="Iqe-l8-DbI" secondAttribute="trailing" id="vIG-MW-rHk"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llE-pL-PoU" userLabel="NoInternet View">
-                                <rect key="frame" x="0.0" y="85" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llE-pL-PoU" userLabel="NoInternet View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="in" translatesAutoresizingMaskIntoConstraints="NO" id="WSl-Sf-ifd">
-                                        <rect key="frame" x="7" y="212.5" width="400" height="300"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in" translatesAutoresizingMaskIntoConstraints="NO" id="WSl-Sf-ifd">
+                                        <rect key="frame" x="7" y="259" width="400" height="300"/>
                                     </imageView>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-Ub-uFp">
-                                        <rect key="frame" x="158" y="476" width="98" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-Ub-uFp">
+                                        <rect key="frame" x="158" y="509" width="98" height="36"/>
                                         <color key="backgroundColor" red="0.96854287390000005" green="0.96868163350000003" blue="0.96851247549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Retry again">
@@ -206,6 +203,12 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96854287390000005" green="0.96868163350000003" blue="0.96851247549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="YQ4-Ub-uFp" firstAttribute="centerX" secondItem="llE-pL-PoU" secondAttribute="centerX" id="EXt-cf-LFl"/>
+                                    <constraint firstItem="YQ4-Ub-uFp" firstAttribute="top" secondItem="WSl-Sf-ifd" secondAttribute="bottom" constant="-50" id="Scw-A3-CNE"/>
+                                    <constraint firstItem="WSl-Sf-ifd" firstAttribute="centerX" secondItem="llE-pL-PoU" secondAttribute="centerX" id="bXm-f6-yeH"/>
+                                    <constraint firstItem="WSl-Sf-ifd" firstAttribute="centerY" secondItem="llE-pL-PoU" secondAttribute="centerY" id="ycj-rm-xEt"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -213,7 +216,11 @@
                             <constraint firstItem="PSN-zc-LUa" firstAttribute="leading" secondItem="VJn-OF-v2d" secondAttribute="leading" id="0A4-CS-fxx"/>
                             <constraint firstItem="VJn-OF-v2d" firstAttribute="trailing" secondItem="PSN-zc-LUa" secondAttribute="trailing" id="1S6-AQ-n45"/>
                             <constraint firstItem="VJn-OF-v2d" firstAttribute="bottom" secondItem="PSN-zc-LUa" secondAttribute="bottom" id="35z-gM-nCD"/>
+                            <constraint firstItem="llE-pL-PoU" firstAttribute="leading" secondItem="VJn-OF-v2d" secondAttribute="leading" id="Gbp-Cm-izr"/>
+                            <constraint firstItem="VJn-OF-v2d" firstAttribute="bottom" secondItem="llE-pL-PoU" secondAttribute="bottom" id="P5N-Ey-fdI"/>
                             <constraint firstItem="PSN-zc-LUa" firstAttribute="top" secondItem="VJn-OF-v2d" secondAttribute="top" id="bHA-Zo-Yyr"/>
+                            <constraint firstItem="llE-pL-PoU" firstAttribute="top" secondItem="VJn-OF-v2d" secondAttribute="top" id="dwe-7O-oF3"/>
+                            <constraint firstItem="llE-pL-PoU" firstAttribute="trailing" secondItem="VJn-OF-v2d" secondAttribute="trailing" id="otP-bV-LMA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VJn-OF-v2d"/>
                     </view>
@@ -350,7 +357,7 @@
         <scene sceneID="gfG-H6-tqt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X8r-3V-WA8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sports" image="gamecontroller" catalog="system" selectedImage="Image" id="LA6-9G-vN9" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Sports" image="sports" id="LA6-9G-vN9" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="Wd1-kH-xkz" id="Ffu-aH-nob"/>
                         </connections>
@@ -372,10 +379,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="20" height="20"/>
         <image name="fav" width="512" height="512"/>
-        <image name="gamecontroller" catalog="system" width="64" height="40"/>
         <image name="in" width="400" height="300"/>
+        <image name="sports" width="20" height="20"/>
         <image name="star" catalog="system" width="64" height="58"/>
     </resources>
 </document>

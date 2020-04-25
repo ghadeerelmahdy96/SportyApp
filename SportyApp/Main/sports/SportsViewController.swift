@@ -60,12 +60,12 @@ class SportsViewController: UIViewController , ReachabilityObserverDelegate{
     
     func reachabilityChanged(_ isReachable: Bool) {
             if !isReachable {
-                print("No internet connection")
+               // print("No internet connection")
                 internetView.isHidden = false
                 sportsView.isHidden = true
                  //  try? addReachabilityObserver()
             }else {
-               print(" internet connection")
+              // print(" internet connection")
                 internetView.isHidden = true
                 sportsView.isHidden = false
                  setupCollectionView()

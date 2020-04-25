@@ -31,8 +31,8 @@ class TeamsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         teamLogoImageView.layer.cornerRadius = teamLogoImageView.frame.size.width / 2
-        teamLogoImageView.kf.setImage(with: URL(string: teamFromLeagueDetails?.strTeamBadge ?? ""),placeholder: UIImage(named: ""))
-        stadiumImageView.kf.setImage(with: URL(string: teamFromLeagueDetails?.strStadiumThumb ?? ""),placeholder: UIImage(named: ""))
+        teamLogoImageView.kf.setImage(with: URL(string: teamFromLeagueDetails?.strTeamBadge ?? ""),placeholder: UIImage(named: "noImageFound.jpg"))
+        stadiumImageView.kf.setImage(with: URL(string: teamFromLeagueDetails?.strStadiumThumb ?? ""),placeholder: UIImage(named: "noImageFound.jpg"))
                 
         teamNameLabel.text = teamFromLeagueDetails?.strTeam ?? ""
         

@@ -29,7 +29,7 @@ extension DetailsViewController{
     }
     
     func configureTeamsCell(cell : TeamCollectionViewCell , index : Int){
-        cell.teamImageView.kf.setImage(with: URL(string: teamsArray[index].strTeamBadge))
+        cell.teamImageView.kf.setImage(with: URL(string: teamsArray[index].strTeamBadge),placeholder: UIImage(named: "noImageFound.jpg"))
         cell.teamNameLabel.text = teamsArray[index].strTeam
     }
     

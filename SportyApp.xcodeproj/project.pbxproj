@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0836D9B52453CD90003F34F8 /* noImageFound.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0836D9B42453CD90003F34F8 /* noImageFound.jpg */; };
 		0888895A244F6C2700378FE5 /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08888959244F6C2700378FE5 /* TeamsTableViewController.swift */; };
 		089F8E862450F0D7004537B5 /* noEventsAvailable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 089F8E852450F0D7004537B5 /* noEventsAvailable.jpg */; };
 		08A4780F244B739700434B21 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4780E244B739700434B21 /* Sport.swift */; };
@@ -36,7 +37,6 @@
 		08A47878244E0AAE00434B21 /* UpComingEventsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47877244E0AAE00434B21 /* UpComingEventsExtension.swift */; };
 		08A4787A244E0D3900434B21 /* LatestEventsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A47879244E0D3900434B21 /* LatestEventsExtension.swift */; };
 		08A4787C244E0FF400434B21 /* TeamsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4787B244E0FF400434B21 /* TeamsExtension.swift */; };
-		08A47883244E57DF00434B21 /* santiagu_bernabeau.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08A47882244E57DF00434B21 /* santiagu_bernabeau.jpg */; };
 		E30A01ED24520A4D00F24073 /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A01EC24520A4D00F24073 /* FavouritesPresenter.swift */; };
 		E30A01EF24520AAF00F24073 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A01EE24520AAF00F24073 /* FavouritesViewController.swift */; };
 		E30A01F124520C2700F24073 /* LeagueTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A01F024520C2700F24073 /* LeagueTableView.swift */; };
@@ -68,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0836D9B42453CD90003F34F8 /* noImageFound.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noImageFound.jpg; sourceTree = "<group>"; };
 		08888959244F6C2700378FE5 /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
 		089F8E852450F0D7004537B5 /* noEventsAvailable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noEventsAvailable.jpg; sourceTree = "<group>"; };
 		08A4780E244B739700434B21 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		08A47877244E0AAE00434B21 /* UpComingEventsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingEventsExtension.swift; sourceTree = "<group>"; };
 		08A47879244E0D3900434B21 /* LatestEventsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestEventsExtension.swift; sourceTree = "<group>"; };
 		08A4787B244E0FF400434B21 /* TeamsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsExtension.swift; sourceTree = "<group>"; };
-		08A47882244E57DF00434B21 /* santiagu_bernabeau.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = santiagu_bernabeau.jpg; sourceTree = "<group>"; };
 		124F82ECE628C95B411B7F00 /* Pods_SportyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EB294BEE8C31B73025DD47 /* Pods-SportyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.release.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFA4B61F650F1AA8631C8A16 /* Pods-SportyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyApp.debug.xcconfig"; path = "Target Support Files/Pods-SportyApp/Pods-SportyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 			children = (
 				08A4782E244C8D5200434B21 /* EmptyStar.png */,
 				08A4782D244C8D5200434B21 /* FilledStar.png */,
-				08A47882244E57DF00434B21 /* santiagu_bernabeau.jpg */,
 				089F8E852450F0D7004537B5 /* noEventsAvailable.jpg */,
+				0836D9B42453CD90003F34F8 /* noImageFound.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -499,9 +499,9 @@
 				E3B1ACB1244A2C6A00C144E6 /* Assets.xcassets in Resources */,
 				089F8E862450F0D7004537B5 /* noEventsAvailable.jpg in Resources */,
 				E3B1ACAC244A2C6600C144E6 /* Main.storyboard in Resources */,
-				08A47883244E57DF00434B21 /* santiagu_bernabeau.jpg in Resources */,
 				E3F55461244DF8750046675C /* LeagueCell.xib in Resources */,
 				08A4782F244C8D5300434B21 /* FilledStar.png in Resources */,
+				0836D9B52453CD90003F34F8 /* noImageFound.jpg in Resources */,
 				08A47860244CE41E00434B21 /* TeamCollectionViewCell.xib in Resources */,
 				08A47858244CCDCF00434B21 /* UpcomingCollectionViewCell.xib in Resources */,
 				08A47870244DE96D00434B21 /* Details.storyboard in Resources */,

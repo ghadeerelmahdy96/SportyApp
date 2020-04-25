@@ -41,19 +41,19 @@ extension DetailsViewController{
             if hometeamsList.count>0{
                 upcomingEventsArray[index].strHomeTeamLogo = hometeamsList[0].strTeamBadge
                                
-                cell.homeImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge))
+                cell.homeImageView.kf.setImage(with: URL(string: hometeamsList[0].strTeamBadge),placeholder: UIImage(named: "noImageFound.jpg"))
             }
 
             let awayteamsList = teamsArray.filter({(value) in value.strTeam ==  upcomingEventsArray[index].strAwayTeam})
             if awayteamsList.count>0 {
                 upcomingEventsArray[index].strAwayTeamLogo = awayteamsList[0].strTeamBadge
-                cell.awayImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge))
+                cell.awayImageView.kf.setImage(with: URL(string:awayteamsList[0].strTeamBadge),placeholder: UIImage(named: "noImageFound.jpg"))
             }
             
          }
          
         cell.vsLabel.text = "VS"
-        cell.layer.cornerRadius = 15
+        cell.layer.cornerRadius = 30
         cell.layer.borderWidth = 1
         
     }

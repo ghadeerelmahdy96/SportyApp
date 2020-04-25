@@ -45,7 +45,7 @@ class LeagueTableView: UITableView , UITableViewDelegate , UITableViewDataSource
       func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            let storyboard = UIStoryboard(name: "Details", bundle: nil)
                  let controller = storyboard.instantiateViewController(identifier: "detailsView") as! DetailsViewController
-         controller.leagueFromMain = leagues[indexPath.row]
+         controller.leagueFromMain = leagues[indexPath.section]
          controller.favouritesController = FavouritesController
         controller.modalPresentationStyle = .popover
         ParentController?.present(controller: controller)

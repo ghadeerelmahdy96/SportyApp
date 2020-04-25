@@ -297,6 +297,21 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noEventsAvailable.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WMD-2W-1xV">
+                                        <rect key="frame" x="0.0" y="94" width="414" height="212"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noEventsAvailable.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="f13-a9-H0B">
+                                        <rect key="frame" x="0.0" y="346" width="414" height="212"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noEventsAvailable.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="iXY-gu-vYC">
+                                        <rect key="frame" x="0.0" y="604" width="414" height="212"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -343,6 +358,9 @@
                     <connections>
                         <outlet property="favoriteButton" destination="8oP-i7-Lve" id="w09-tL-bt4"/>
                         <outlet property="latestCollectionView" destination="QgJ-23-PKE" id="wPL-8x-r9C"/>
+                        <outlet property="noLatestEventsImageView" destination="f13-a9-H0B" id="Mkc-Xs-bnC"/>
+                        <outlet property="noTeamsImageView" destination="iXY-gu-vYC" id="6GJ-zJ-zqB"/>
+                        <outlet property="noUpcomingEventsImageView" destination="WMD-2W-1xV" id="Xs7-LS-mlq"/>
                         <outlet property="teamsCollectionView" destination="X2d-a7-8Wf" id="y8D-o9-cFF"/>
                         <outlet property="upcomingCollectionView" destination="Njd-YZ-5hf" id="pSH-Sb-jLW"/>
                     </connections>
@@ -372,5 +390,6 @@
     </scenes>
     <resources>
         <image name="EmptyStar.png" width="50" height="50"/>
+        <image name="noEventsAvailable.jpg" width="259" height="195"/>
     </resources>
 </document>

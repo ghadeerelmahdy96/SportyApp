@@ -16,6 +16,10 @@ class DetailsViewController: UIViewController{
     @IBOutlet weak var latestCollectionView: UICollectionView!
     @IBOutlet weak var teamsCollectionView: UICollectionView!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var noUpcomingEventsImageView: UIImageView!
+    
+    @IBOutlet weak var noLatestEventsImageView: UIImageView!
+    @IBOutlet weak var noTeamsImageView: UIImageView!
     
     //Variables
     
@@ -30,8 +34,7 @@ class DetailsViewController: UIViewController{
     var emptyStarImage = UIImage(named: "EmptyStar.png")
     var filledStarImage = UIImage(named: "FilledStar.png")
     var isTeamDataLoaded = false
-    var upcomingEventsHiddenCellsCount = 0
-    var latestEventsHiddenCellsCount = 0
+  
     
     //Functions
         

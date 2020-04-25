@@ -17,22 +17,36 @@ extension DetailsViewController{
            DispatchQueue.main.async {
                 self.teamsArray = teamsArrayNew
                 self.teamsCollectionView.isUserInteractionEnabled = true
-                self.teamsCollectionView.reloadData()
-                self.upcomingCollectionView.reloadData()
-                self.latestCollectionView.reloadData()
                 self.activityIndicator.stopAnimating()
                 self.isTeamDataLoaded = true
-                    
+            
+                self.renderUpcomingEvents()
+                self.renderLatestEvents()
+                self.renderTeams()
            }
        }
        detailsPresenter.getTeams(leagueName: leagueName, completionHandler: closure)
     }
     
     func configureTeamsCell(cell : TeamCollectionViewCell , index : Int){
-                       
         cell.teamImageView.kf.setImage(with: URL(string: teamsArray[index].strTeamBadge))
         cell.teamNameLabel.text = teamsArray[index].strTeam
-        
+    }
+    
+    func renderTeams(){
+        if self.teamsArray.count>0{
+            self.teamsCollectionView.isUserInteractionEnabled = true
+            self.teamsCollectionView.reloadData()
+            
+            self.teamsCollectionView.isHidden = false
+            self.noTeamsImageView.isHidden = true
+            
+        }
+        else{
+            self.teamsCollectionView.isHidden = true
+            self.noTeamsImageView.isHidden = false
+        }
+                       
     }
     
 }

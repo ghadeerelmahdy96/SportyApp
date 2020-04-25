@@ -72,7 +72,6 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
             controller.teamFromLeagueDetails = teamsArray[indexPath.row]
             controller.modalPresentationStyle = .popover
             self.present(controller, animated: true, completion: nil)
-//            self.navigation.pushViewController(controller, animated: true)
            
         }
     }

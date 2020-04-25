@@ -16,4 +16,7 @@ class FavouritesPresenter {
        func getLeagues(completionHandler:@escaping (_ sports:[League])->Void) {
           completionHandler( repo.getFavouriteLeagues())
        }
+    func removeLeague(id:String){
+           repo.deleteLeague(id: id)
+       }
 }

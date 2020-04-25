@@ -9,4 +9,5 @@
 import Foundation
 protocol ReloadTableViewDelegate {
     func reloadYourTableView ()
+    func showDeleteAlert(league:League)
 }

@@ -52,7 +52,19 @@ class LeagueTableView: UITableView , UITableViewDelegate , UITableViewDataSource
          
      }
     
-    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+           if (FavouritesController != nil) {
+               return true
+           }
+           return false
+       }
+         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+                  if (editingStyle == .delete) {
+                   self.FavouritesController?.showDeleteAlert(league: leagues[indexPath.section])
+                  }
+       }
+
+     
 
   
 

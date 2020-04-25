@@ -51,6 +51,8 @@
 		E3B1ACAF244A2C6600C144E6 /* SportyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3B1ACAD244A2C6600C144E6 /* SportyApp.xcdatamodeld */; };
 		E3B1ACB1244A2C6A00C144E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACB0244A2C6A00C144E6 /* Assets.xcassets */; };
 		E3B1ACB4244A2C6A00C144E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B1ACB2244A2C6A00C144E6 /* LaunchScreen.storyboard */; };
+		E3BE645A24547B7900B6D13D /* CustomLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BE645924547B7900B6D13D /* CustomLaunchScreen.storyboard */; };
+		E3BE645C24547B8300B6D13D /* CustomScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE645B24547B8300B6D13D /* CustomScreenViewController.swift */; };
 		E3F55446244B8B450046675C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55445244B8B450046675C /* Constants.swift */; };
 		E3F55448244C6F6E0046675C /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55447244C6F6E0046675C /* RepositoryProtocol.swift */; };
 		E3F5544A244C6FBD0046675C /* RepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F55449244C6FBD0046675C /* RepositoryImp.swift */; };
@@ -117,6 +119,8 @@
 		E3B1ACB0244A2C6A00C144E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3B1ACB3244A2C6A00C144E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3B1ACB5244A2C6A00C144E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BE645924547B7900B6D13D /* CustomLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomLaunchScreen.storyboard; sourceTree = "<group>"; };
+		E3BE645B24547B8300B6D13D /* CustomScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScreenViewController.swift; sourceTree = "<group>"; };
 		E3F55445244B8B450046675C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E3F55447244C6F6E0046675C /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		E3F55449244C6FBD0046675C /* RepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImp.swift; sourceTree = "<group>"; };
@@ -302,6 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				E3B1ACAA244A2C6600C144E6 /* Main.storyboard */,
+				E3BE645B24547B8300B6D13D /* CustomScreenViewController.swift */,
+				E3BE645924547B7900B6D13D /* CustomLaunchScreen.storyboard */,
 			);
 			path = "Main View";
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				E3B1ACB1244A2C6A00C144E6 /* Assets.xcassets in Resources */,
 				089F8E862450F0D7004537B5 /* noEventsAvailable.jpg in Resources */,
 				E3B1ACAC244A2C6600C144E6 /* Main.storyboard in Resources */,
+				E3BE645A24547B7900B6D13D /* CustomLaunchScreen.storyboard in Resources */,
 				E3F55461244DF8750046675C /* LeagueCell.xib in Resources */,
 				08A4782F244C8D5300434B21 /* FilledStar.png in Resources */,
 				0836D9B52453CD90003F34F8 /* noImageFound.jpg in Resources */,
@@ -599,6 +606,7 @@
 				E30A01F524520FFB00F24073 /* PresentControllerDelegate.swift in Sources */,
 				08A47816244B7AC900434B21 /* LeaguesHandler.swift in Sources */,
 				08A47842244CA33B00434B21 /* DetailsViewController.swift in Sources */,
+				E3BE645C24547B8300B6D13D /* CustomScreenViewController.swift in Sources */,
 				E3F55460244DF8750046675C /* LeagueCell.swift in Sources */,
 				E3F55458244DC1900046675C /* SportsPresenter.swift in Sources */,
 				E30A01ED24520A4D00F24073 /* FavouritesPresenter.swift in Sources */,

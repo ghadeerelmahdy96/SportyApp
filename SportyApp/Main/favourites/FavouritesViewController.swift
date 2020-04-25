@@ -46,6 +46,34 @@ class FavouritesViewController: UIViewController , ReloadTableViewDelegate {
                 }
                }
        }
+    //MARK:- Swipe to delete
+     func showDeleteAlert (league:League){
+           let con = UIAlertController.init(title: "Delete Item", message: "Are you sure to delete this item?", preferredStyle: .alert)
+         con.addAction(.init(title: "Cancel", style: .cancel, handler: { (action) in
+             self.dismiss(animated: true, completion: nil)
+         }))
+           con.addAction(.init(title: "Delete", style: .destructive, handler: { (action) in
+             self.peresnter.removeLeague(id: league.idLeague)
+             self.reloadYourTableView()
+           }))
+         self.present(controller: con)
+       }
+
+
+     
+     //MARK:- Swipe to sports
+     func swipeRight (){
+             let recognition = UISwipeGestureRecognizer.init(target: self, action: #selector(showSportsWhenSwipe))
+             recognition.direction = .right
+             self.view.addGestureRecognizer(recognition)
+         }
+        @objc private func showSportsWhenSwipe(){
+            self.tabBarController?.selectedIndex = 0
+         tabBarController?.setEditing(true, animated: true)
+         self.tabBarController?.beginAppearanceTransition(true, animated: true)
+        
+        }
+        
        
 
 }

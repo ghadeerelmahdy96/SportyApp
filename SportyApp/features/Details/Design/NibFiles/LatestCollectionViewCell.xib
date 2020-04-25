@@ -110,6 +110,7 @@
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="YeE-9W-H3m" firstAttribute="top" secondItem="BCe-H8-bcG" secondAttribute="bottom" constant="8" id="6Ng-ef-lfx"/>
                 <constraint firstItem="RIF-In-aJd" firstAttribute="trailing" secondItem="4aj-73-w69" secondAttribute="trailing" id="CLG-mW-gQ4"/>

@@ -31,6 +31,8 @@ extension DetailsViewController{
     func configureTeamsCell(cell : TeamCollectionViewCell , index : Int){
         cell.teamImageView.kf.setImage(with: URL(string: teamsArray[index].strTeamBadge),placeholder: UIImage(named: "noImageFound.jpg"))
         cell.teamNameLabel.text = teamsArray[index].strTeam
+        cell.layer.cornerRadius = 30
+        cell.layer.borderWidth = 1
     }
     
     func renderTeams(){
@@ -46,6 +48,8 @@ extension DetailsViewController{
             self.teamsCollectionView.isHidden = true
             self.noTeamsImageView.isHidden = false
         }
+        
+        
                        
     }
     

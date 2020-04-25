@@ -20,7 +20,7 @@ extension DetailsViewController : UICollectionViewDelegate, UICollectionViewData
           }else if collectionView == latestCollectionView{
                return CGSize(width: 269, height: 209)
           }else if collectionView == teamsCollectionView{
-               return CGSize(width: 192, height: 152)
+               return CGSize(width: 192, height: 133)
           }
         return CGSize(width: 296, height: 209)
     }
